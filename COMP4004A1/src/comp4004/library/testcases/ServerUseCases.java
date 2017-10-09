@@ -2,16 +2,21 @@ package comp4004.library.testcases;
 
 import static org.junit.Assert.*;
 
+import java.util.Date;
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Test;
 import comp4004.library.*;
 
-public class ServerLogicTest {
+public class ServerUseCases {
 	SInHandler sinhandler = new SInHandler();
 	SOutput so;
 	Object result="";
 	
+	@After
+	public void tearDown() throws Exception {
+	}
 	
 	@Test
 	public void ClerkLoginTest() {
@@ -231,4 +236,25 @@ public class ServerLogicTest {
 		so = sinhandler.processInput("Yu@carleton.ca,Yu", 11);
 		assertFalse(so.getState() == 40);
 	}
+	
+	@Test
+	public void BorrowTest() {
+		//borrowing a book
+		result = LoanTable.getInstance().createloan(2, "9781317594277", "1", new Date());
+		assertTrue(result.equals("success"));
+		//incorrect copynumber
+		result = LoanTable.getInstance().createloan(2, "9781317594277", "3", new Date());
+		assertTrue(result.equals("Copynumber Invalid"));
+		//incorrect ISBN
+		result = LoanTable.getInstance().createloan(2, "9781317594000", "1", new Date());
+		assertTrue(result.equals("ISBN Invalid"));
+		//borrowing unavailable book
+		result = LoanTable.getInstance().createloan(2, "9781317594277", "1", new Date());
+		assertTrue(result.equals("The Item is Not Available"));
+		//user has outstanding fee
+		result = LoanTable.getInstance().createloan(0, "9781442667181", "1", new Date());
+		assertTrue(result.equals("Outstanding Fee Exists"));
+	}
+	
+	
 }

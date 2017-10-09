@@ -2,6 +2,10 @@ package comp4004.library;
 
 import comp4004.library.SOutput;
 import comp4004.library.UtilConfig;
+import comp4004.library.LoanTable;
+
+import java.util.Date;
+
 import comp4004.library.ItemTable;
 import comp4004.library.TitleTable;
 import comp4004.library.UserTable;
@@ -24,6 +28,8 @@ public class SOutHandler {
 	//User States
 	public static final int USER = 40;
 	public static final int USERLOGIN = 41;
+	//User Option States
+	public static final int BORROW = 50;
 	
 	
 	public SOutput clerkLogin(String input) {
@@ -196,6 +202,38 @@ public class SOutHandler {
         		output.setOutput("The User Does Not Exist!Please The Username and Password:'username,password'");
             	output.setState(USERLOGIN);
         	}
+        }
+		return output;
+	}
+	
+	public SOutput borrow(String input) {
+		SOutput output=new SOutput("",0);
+		String[] strArray = null;   
+        strArray = input.split(",");
+        boolean email=strArray[0].contains("@");
+        int userid=UserTable.getInstance().lookup(strArray[0]);
+        Object result="";
+        if(strArray.length!=3 || email!=true){
+        	output.setOutput("Your input should in this format:'useremail,ISBN,copynumber'");
+        	output.setState(BORROW);
+        }else if(userid==-1){
+        	output.setOutput("The User Does Not Exist!");
+        	output.setState(BORROW);
+        }else{
+        	boolean ISBN=isInteger(strArray[1]);
+        	boolean copynumber=isNumber(strArray[2]);
+        	if(ISBN!=true || copynumber!=true){
+        		output.setOutput("Your input should in this format:'useremail,ISBN,copynumber'");
+            	output.setState(BORROW);
+        	}else{
+        		result=LoanTable.getInstance().createloan(userid, strArray[1], strArray[2], new Date());
+        		if(result.equals("success")){
+            		output.setOutput("Success!");
+            	}else{
+            		output.setOutput(result+"!");
+            	}
+        	}
+        	output.setState(USER);
         }
 		return output;
 	}
