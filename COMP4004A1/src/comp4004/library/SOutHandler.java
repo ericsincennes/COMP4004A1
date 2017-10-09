@@ -17,6 +17,8 @@ public class SOutHandler {
 	public static final int CREATEUSER = 20;
 	public static final int CREATETITLE = 21;
 	public static final int CREATEITEM = 22;
+	//Deletion States
+	public static final int DELETEUSER = 30;
 	
 	
 	public SOutput clerkLogin(String input) {
@@ -89,6 +91,31 @@ public class SOutHandler {
         		output.setOutput("Success!");
         	}else{
         		output.setOutput("The Title Does Not Exists!");
+        	}
+        	output.setState(CLERK);
+        }
+		return output;
+	}
+	
+	public SOutput deleteUser(String input) {
+		SOutput output=new SOutput("",0);
+		String[] strArray = null;   
+        strArray = input.split(",");
+        int userid=UserTable.getInstance().lookup(strArray[0]);
+        boolean email=strArray[0].contains("@");
+        Object result="";
+        if(strArray.length!=1 || email!=true){
+        	output.setOutput("Your input should in this format:'useremail'");
+        	output.setState(DELETEUSER);
+        }else if(userid==-1){
+        	output.setOutput("The User Does Not Exist!");
+        	output.setState(DELETEUSER);
+        }else{
+        	result=UserTable.getInstance().delete(userid);
+        	if(result.equals("success")){
+        		output.setOutput("Success!");
+        	}else{
+        		output.setOutput(result+"!");
         	}
         	output.setState(CLERK);
         }

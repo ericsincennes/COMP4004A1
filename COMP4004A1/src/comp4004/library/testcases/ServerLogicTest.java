@@ -10,6 +10,7 @@ import comp4004.library.*;
 public class ServerLogicTest {
 	SInHandler sinhandler = new SInHandler();
 	SOutput so;
+	Object result="";
 	
 	
 	@Test
@@ -27,8 +28,6 @@ public class ServerLogicTest {
 	
 	@Test
 	public void CreateUserTest() {
-		Object result ="";
-		
 		//unique username
 		result = UserTable.getInstance().createuser("eric@carleton.ca", "hello");
 		assertTrue(result.equals(true));
@@ -63,13 +62,11 @@ public class ServerLogicTest {
 	
 	@Test
 	public void CreateTitleTest() {
-		Object result="";
-		
 		//unique isbn
 		result= TitleTable.getInstance().createtitle("9999999999999", "Test Book Vol.1");
 		assertTrue(result.equals(true));
 		
-		//username already exists 
+		//isbn already exists 
 		result = TitleTable.getInstance().createtitle("9781442616899", "Dante's lyric poetry");
 		assertTrue(result.equals(false));
 		
@@ -99,8 +96,6 @@ public class ServerLogicTest {
 	
 	@Test
 	public void CreateItemTest() {
-		Object result="";
-		
 		//create additional copy of existing book
 		result = ItemTable.getInstance().createitem("9781442668584");
 		assertTrue(result.equals(true));
@@ -116,5 +111,39 @@ public class ServerLogicTest {
 		//Cannot create 2nd copy of book with out first copy
 		result = ItemTable.getInstance().createitem("1112223334444");
 		assertFalse(result.equals(true));
+	}
+	
+	@Test
+	public void DeleteUserTest() {
+		//delete existing user
+		List<User> temp = UserTable.getInstance().getUserTable();
+		int id = -1;
+		
+		for (int i=0; i<temp.size(); i++) {
+			if (temp.get(i).getUsername() == "Yu@carleton.ca") {
+				id = i;
+			}
+		}
+		result = UserTable.getInstance().delete(id);
+		assertTrue(result.equals("success"));
+		int count = 0;
+		for (int i=0; i<temp.size(); i++) {
+			if (temp.get(i).getUsername() == "Yu@carleton.ca") {
+				count++;
+			} 
+		} 
+		if (count == 1) {
+			fail("user not removed from list");
+		}
+		
+		//delete nonexistant user
+		id = -1;
+		for (int i=0; i<temp.size(); i++) {
+			if (temp.get(i).getUsername() == "testuser") {
+				id = i;
+			} 
+		}
+		result = UserTable.getInstance().delete(id);
+		assertFalse(result.equals("success"));
 	}
 }

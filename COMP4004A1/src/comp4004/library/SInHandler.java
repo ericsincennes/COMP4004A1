@@ -14,6 +14,8 @@ public class SInHandler {
 	public static final int CREATEUSER = 20;
 	public static final int CREATETITLE = 21;
 	public static final int CREATEITEM = 22;
+	//Deletion States
+	public static final int DELETEUSER = 30;
 	
 	SOutHandler southandler = new SOutHandler();
 	
@@ -56,6 +58,11 @@ public class SInHandler {
 			            output = "Please Input Item Info:'ISBN'";
 			            state=CREATEITEM;
 			            oo.setOutput(output);
+			            oo.setState(state);
+	        	 	}else if (input.equalsIgnoreCase("delete user")) {
+		            	output = "Please Input User Info: 'user email'";
+		            	state=DELETEUSER;
+		            	oo.setOutput(output);
 			            oo.setState(state);
 	        	 	}else if(input.equalsIgnoreCase("log out")){
 	        	 		output = "Successfully Log Out!";
@@ -122,6 +129,24 @@ public class SInHandler {
 			            oo.setState(state);
 		        	}else{
 		        		o=southandler.createItem(input);
+		        		output=o.getOutput();
+		        		state=o.getState();
+		        		oo.setOutput(output);
+			            oo.setState(state);
+		        	}
+	         }else if(state==DELETEUSER){
+		        	if(input.equalsIgnoreCase("log out")){
+		            	output = "Successfully Log Out!";
+		                state = WAIT;
+		                oo.setOutput(output);
+			            oo.setState(state);
+		        	}else if(input.equalsIgnoreCase("main menu")){
+		        		output = "What can I do for you?Menu:Create User/Title/Item,Delete User/Title/Item.";
+		                state = CLERK;
+		                oo.setOutput(output);
+			            oo.setState(state);
+		        	}else{
+		        		o=southandler.deleteUser(input);
 		        		output=o.getOutput();
 		        		state=o.getState();
 		        		oo.setOutput(output);
