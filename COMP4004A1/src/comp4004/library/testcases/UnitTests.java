@@ -9,7 +9,7 @@ import org.junit.After;
 import org.junit.Test;
 import comp4004.library.*;
 
-public class ServerUseCases {
+public class UnitTests {
 	SInHandler sinhandler = new SInHandler();
 	SOutput so;
 	Object result="";
