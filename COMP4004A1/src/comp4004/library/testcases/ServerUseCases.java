@@ -256,5 +256,19 @@ public class ServerUseCases {
 		assertTrue(result.equals("Outstanding Fee Exists"));
 	}
 	
-	
+	@Test
+	public void RenewTest() {
+		//renewing loan on a book
+		result = LoanTable.getInstance().renewal(2, "9781317594277", "1", new Date());
+		assertTrue(result.equals("success"));
+		//renewing loan more than once
+		result = LoanTable.getInstance().renewal(2, "9781317594277", "1", new Date());
+		assertTrue(result.equals("Renewed Item More Than Once for the Same Loan"));
+		//user has outstanding fee
+		result = LoanTable.getInstance().renewal(0, "9781442667181", "1", new Date());
+		assertTrue(result.equals("Outstanding Fee Exists"));
+		//renewing a loan that doesnt exist
+		result = LoanTable.getInstance().renewal(2, "9781442667181", "1", new Date());
+		assertTrue(result.equals("The loan does not exist"));
+	}
 }
