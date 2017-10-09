@@ -20,6 +20,7 @@ public class SOutHandler {
 	//Deletion States
 	public static final int DELETEUSER = 30;
 	public static final int DELETETITLE = 31;
+	public static final int DELETEITEM = 32;
 	
 	
 	public SOutput clerkLogin(String input) {
@@ -144,6 +145,33 @@ public class SOutHandler {
 		return output;
 	}
 	
+	public SOutput deleteItem(String input) {
+		SOutput output=new SOutput("",0);
+		String[] strArray = null;   
+        strArray = input.split(",");
+        boolean number=isInteger(strArray[0]);
+        Object result="";
+        if(strArray.length!=2 || number!=true){
+        	output.setOutput("Your input should in this format:'ISBN,copynumber',ISBN should be a 13-digit number");
+        	output.setState(DELETEITEM);
+        }else{
+        	boolean copynumber=isNumber(strArray[1]);
+        	if(copynumber!=true){
+        		output.setOutput("Your input should in this format:'ISBN,copynumber',ISBN should be a 13-digit number");
+            	output.setState(DELETEITEM);
+        	}else{
+        		result=ItemTable.getInstance().delete(strArray[0], strArray[1]);
+            	if(result.equals("success")){
+            		output.setOutput("Success!");
+            	}else{
+            		output.setOutput(result+"!");
+            	}
+            	output.setState(CLERK);
+        	}
+        }
+		return output;
+	}
+	
 	public static boolean isInteger(String value) {
 		char[] ch = value.toCharArray();
 		boolean isNumber=true;
@@ -154,6 +182,15 @@ public class SOutHandler {
 		}else{
 			isNumber=false;
 		}
+		return isNumber;
+	}
+	
+	public boolean isNumber(String value) {
+		char[] ch = value.toCharArray();
+		boolean isNumber=true;
+			for (int i = 0; i < ch.length; i++) {
+				isNumber = Character.isDigit(ch[i]);
+			}
 		return isNumber;
 	}
 	

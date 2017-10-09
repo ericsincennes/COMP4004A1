@@ -3,6 +3,7 @@ package comp4004.library;
 import java.util.ArrayList;
 import java.util.List;
 import comp4004.library.Item;
+import comp4004.library.LoanTable;
 
 
 public class ItemTable {
@@ -52,6 +53,34 @@ public class ItemTable {
 			}
 		}
 		
+	}
+	
+	public Object delete(String string, String string2) {
+		String result="";
+		int index=0;
+		int flag=0;
+		for(int i=0;i<itemList.size();i++){
+			String ISBN=(itemList.get(i)).getISBN();
+			String copynumber=(itemList.get(i)).getCopynumber();
+			if(ISBN.equalsIgnoreCase(string) && copynumber.equalsIgnoreCase(string2)){
+				index=i;
+				flag=flag+1;
+			}else{
+				flag=flag+0;
+			}
+		}
+		if(flag!=0){
+			boolean loan=LoanTable.getInstance().checkLoan(string,string2);
+			if(loan){
+			itemList.get(index).setCopynumber("N/A");
+			result="success";
+			}else{
+				result="Active Loan Exists";
+			}
+		}else{
+			result="The Item Does Not Exist";
+		}
+		return result;
 	}
 
 	public List<Item> getItemTable() {

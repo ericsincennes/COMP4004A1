@@ -105,7 +105,9 @@ public class ServerLogicTest {
 			if (temp.get(i).getISBN() == "9781442668584" && temp.get(i).getCopynumber() != "1") {
 				assertTrue(temp.get(i).getCopynumber().equals("2"));
 			} else {
-				assertTrue(temp.get(i).getCopynumber().equals("1"));
+				if (!(temp.get(i).getCopynumber() == "N/A")) {
+					assertTrue(temp.get(i).getCopynumber().equals("1"));
+				}
 			}
 		}
 		//Cannot create 2nd copy of book with out first copy
@@ -183,6 +185,37 @@ public class ServerLogicTest {
 		}
 		if (count != 1) {
 			fail("book deleted regardless");
+		}
+	}
+	
+	@Test
+	public void DeleteItemTest() {
+		List<Item> temp = ItemTable.getInstance().getItemTable();
+		//delete existing item
+		result = ItemTable.getInstance().delete("9781611687910", "1");
+		assertTrue(result.equals("success"));
+		
+		//delete item that is on loan
+		result= ItemTable.getInstance().delete("9781442668584", "1");
+		assertTrue(result.equals("Active Loan Exists"));
+		
+		//delete title that doesnt exist
+		result = ItemTable.getInstance().delete("9781442616899", "3");
+		assertTrue(result.equals("The Item Does Not Exist"));
+		
+		
+		//check deletion
+		for (int i=0; i<temp.size(); i++) {
+			if (temp.get(i).getISBN() == "9781611687910") {
+				assertTrue(temp.get(i).getCopynumber() == "N/A");
+			} 
+		}
+		
+		//check non-deletion of loaned book
+		for (int i=0; i<temp.size(); i++) {
+			if (temp.get(i).getISBN() == "9781442668584") {
+				assertFalse(temp.get(i).getCopynumber() == "N/A");
+			} 
 		}
 	}
 }
