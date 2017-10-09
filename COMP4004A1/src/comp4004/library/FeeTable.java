@@ -10,8 +10,12 @@ import comp4004.library.UtilConfig;
 import comp4004.library.FeeTable;
 import comp4004.library.LoanTable;
 
+import org.apache.log4j.Logger;
+import comp4004.library.UtilTrace;
+
 
 public class FeeTable {
+	private Logger logger = UtilTrace.getInstance().getLogger("opreation_file");
 	List<Fee> feeList=new ArrayList<Fee>();
     private static class FeeListHolder {
         private static final FeeTable INSTANCE = new FeeTable();
@@ -92,17 +96,21 @@ public class FeeTable {
 			if(a>=0){
 				feeList.get(index).setFee(a+feeList.get(index).getFee());
 				feeList.get(index).setUserid(j);
+				logger.info(String.format("Operation:Apply OutStanding Fee;Fee Info:[%d,%d];State:Success", j,a+feeList.get(index).getFee()));
 			}else{
 				feeList.get(index).setFee(feeList.get(index).getFee());
 				feeList.get(index).setUserid(j);
+				logger.info(String.format("Operation:Apply OutStanding Fee;Fee Info:[%d,%d];State:Success", j,a+feeList.get(index).getFee()));
 			}
 		}else{
 			if(a>=0){
 				Fee fee=new Fee(j,a);
 				feeList.add(fee);
+				logger.info(String.format("Operation:Apply OutStanding Fee;Fee Info:[%d,%d];State:Success", j,a));
 			}else{
 				Fee fee=new Fee(j,0);
 				feeList.add(fee);
+				logger.info(String.format("Operation:Apply OutStanding Fee;Fee Info:[%d,%d];State:Success", j,0));
 			}
 		}
 	}
@@ -127,10 +135,12 @@ public class FeeTable {
 		}
 		if(oloan==false){
 			result="Borrowing Items Exist";
+			logger.info(String.format("Operation:Pay Fine;Fee Info:[%d,%d];State:Fail;Reason:Borrowing Items Exist.", i,fee));
 		}else{
 			feeList.get(index).setUserid(i);
 			feeList.get(index).setFee(0);
 			result="success";
+			logger.info(String.format("Operation:Pay Fine;Fee Info:[%d,%d];State:Success", i,fee));
 		}
 		return result;
 	}
@@ -142,6 +152,7 @@ public class FeeTable {
     	List<Loan> loanList=LoanTable.getInstance().getLoanTable();
     	for(int i=0;i<loanList.size();i++){
     		applyfee(loanList.get(i).getUserid(), new Date().getTime()-loanList.get(i).getDate().getTime());
+    		logger.info(String.format("Operation:Initialize FeeTable;FeeTable: %s", feeList));
     	}
 	}
 }
