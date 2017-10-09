@@ -1,0 +1,558 @@
+2016-01-23 04:16:36 INFO  LibServer:34 - Binding to port 5050
+@2016-01-23 04:16:36 INFO  LibServer:63 - Waiting for a client ...
+@2016-01-23 04:16:36 INFO  LibServer:48 - Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=5050] 10
+@2016-01-23 04:16:36 INFO  String:25 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2016-01-23 04:16:36 INFO  String:23 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry ], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context]]
+@2016-01-23 04:16:36 INFO  String:25 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1]]
+@2016-01-23 04:16:36 INFO  String:25 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2016-01-23 04:16:36,0]]
+@2016-01-23 04:16:36 INFO  String:98 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2016-01-23 04:16:36 INFO  String:122 - Operation:Initialize FeeTable;FeeTable: [[0,5]]
+@2016-01-23 04:19:51 INFO  LibClient:31 - 63948 : Connected to server: /127.0.0.1
+@2016-01-23 04:19:51 INFO  LibClient:32 - 63948 : Connected to portid: 63948
+@2016-01-23 04:19:51 INFO  LibServer:72 - Client accepted : Client Address : [/127.0.0.1:63948] Client Socket: [63948 ]
+
+@2016-01-23 04:19:51 INFO  LibServer:63 - Waiting for a client ...
+@2016-01-23 04:19:51 INFO  ServerThread:53 - Class: ServerThread: Server Thread Running__63948
+@2016-01-23 04:19:53 INFO  LibServer:102 - Input from 127.0.0.1:63948 hello
+@2016-01-23 04:19:53 INFO  LibServer:119 - Output to 127.0.0.1:63948 Who Are you?Clerk or User?
+
+@2016-01-23 04:19:56 INFO  LibServer:102 - Input from 127.0.0.1:63948 clerk
+@2016-01-23 04:19:56 INFO  LibServer:111 - Output to 127.0.0.1:63948 Please Input The Password:
+
+@2016-01-23 04:19:58 INFO  LibServer:102 - Input from 127.0.0.1:63948 admin
+@2016-01-23 04:19:58 INFO  LibServer:111 - Output to 127.0.0.1:63948 What can I do for you?Menu:Create User/Title/Item,Delete User/Title/Item.
+
+@2016-01-23 04:20:03 INFO  LibServer:102 - Input from 127.0.0.1:63948 log out
+@2016-01-23 04:20:03 INFO  LibServer:111 - Output to 127.0.0.1:63948 Successfully Log Out!
+
+@2016-01-23 04:20:07 INFO  LibServer:102 - Input from 127.0.0.1:63948 hello
+@2016-01-23 04:20:07 INFO  LibServer:111 - Output to 127.0.0.1:63948 Who Are you?Clerk or User?
+
+@2016-01-23 04:20:09 INFO  LibServer:102 - Input from 127.0.0.1:63948 user
+@2016-01-23 04:20:09 INFO  LibServer:111 - Output to 127.0.0.1:63948 Please Input Username and Password:'username,password'
+
+@2016-01-23 04:20:17 INFO  LibServer:102 - Input from 127.0.0.1:63948 zhibo@carleton.ca,zhibo
+@2016-01-23 04:20:17 INFO  LibServer:111 - Output to 127.0.0.1:63948 What can I do for you?Menu:Borrow,Renew,Return,Pay Fine.
+
+@2016-01-23 04:20:21 INFO  ServerThread:60 - Class: ServerThread: Exception thrown : Connection reset 
+
+@2016-01-23 04:33:06 INFO  LibServer:34 - Binding to port 5050
+@2016-01-23 04:33:06 INFO  LibServer:63 - Waiting for a client ...
+@2016-01-23 04:33:06 INFO  LibServer:48 - Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=5050] 10
+@2016-01-23 04:33:06 INFO  String:25 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2016-01-23 04:33:06 INFO  String:23 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry ], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context]]
+@2016-01-23 04:33:06 INFO  String:25 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1]]
+@2016-01-23 04:33:06 INFO  String:25 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2016-01-23 04:33:06,0]]
+@2016-01-23 04:33:06 INFO  String:98 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2016-01-23 04:33:06 INFO  String:122 - Operation:Initialize FeeTable;FeeTable: [[0,5]]
+@2016-01-23 04:34:03 INFO  LibServer:72 - Client accepted : Client Address : [/127.0.0.1:63997] Client Socket: [63997 ]
+
+@2016-01-23 04:34:03 INFO  LibServer:63 - Waiting for a client ...
+@2016-01-23 04:34:03 INFO  ServerThread:53 - Class: ServerThread: Server Thread Running__63997
+@2016-01-23 04:34:03 INFO  LibClient:31 - 63997 : Connected to server: /127.0.0.1
+@2016-01-23 04:34:03 INFO  LibClient:32 - 63997 : Connected to portid: 63997
+@2016-01-23 04:34:05 INFO  LibServer:102 - Input from 127.0.0.1:63997 hello
+@2016-01-23 04:34:05 INFO  LibServer:119 - Output to 127.0.0.1:63997 Who Are you?Clerk or User?
+
+@2016-01-23 04:34:09 INFO  LibServer:102 - Input from 127.0.0.1:63997 clerk
+@2016-01-23 04:34:09 INFO  LibServer:111 - Output to 127.0.0.1:63997 Please Input The Password:
+
+@2016-01-23 04:34:10 INFO  LibServer:102 - Input from 127.0.0.1:63997 admin
+@2016-01-23 04:34:10 INFO  LibServer:111 - Output to 127.0.0.1:63997 What can I do for you?Menu:Create User/Title/Item,Delete User/Title/Item.
+
+@2016-01-23 04:35:32 INFO  ServerThread:60 - Class: ServerThread: Exception thrown : Connection reset 
+
+@2016-01-23 17:48:56 INFO  LibServer:34 - Binding to port 5050
+@2016-01-23 17:48:56 INFO  LibServer:63 - Waiting for a client ...
+@2016-01-23 17:48:56 INFO  LibServer:48 - Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=5050] 10
+@2016-01-23 17:48:56 INFO  String:25 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2016-01-23 17:48:56 INFO  String:23 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry ], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context]]
+@2016-01-23 17:48:56 INFO  String:25 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1]]
+@2016-01-23 17:48:56 INFO  String:25 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2016-01-23 05:48:56,0]]
+@2016-01-23 17:48:56 INFO  String:98 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2016-01-23 17:48:56 INFO  String:122 - Operation:Initialize FeeTable;FeeTable: [[0,5]]
+@2016-01-23 17:49:17 INFO  LibServer:72 - Client accepted : Client Address : [/127.0.0.1:59713] Client Socket: [59713 ]
+
+@2016-01-23 17:49:17 INFO  LibServer:63 - Waiting for a client ...
+@2016-01-23 17:49:17 INFO  ServerThread:53 - Class: ServerThread: Server Thread Running__59713
+@2016-01-23 17:49:17 INFO  LibClient:31 - 59713 : Connected to server: /127.0.0.1
+@2016-01-23 17:49:17 INFO  LibClient:32 - 59713 : Connected to portid: 59713
+@2016-01-23 17:49:17 INFO  LibClient:82 - Class: LibClient   : Exception thrown : 存储空间不足，无法处理此命令。 
+
+@2016-01-23 17:49:17 INFO  LibClient:111 - Class: LibClient   : Exception thrown : 句柄无效。 
+
+@2016-01-23 17:49:42 INFO  LibServer:72 - Client accepted : Client Address : [/127.0.0.1:59739] Client Socket: [59739 ]
+
+@2016-01-23 17:49:42 INFO  LibServer:63 - Waiting for a client ...
+@2016-01-23 17:49:42 INFO  LibClient:31 - 59739 : Connected to server: /127.0.0.1
+@2016-01-23 17:49:42 INFO  LibClient:32 - 59739 : Connected to portid: 59739
+@2016-01-23 17:49:42 INFO  ServerThread:53 - Class: ServerThread: Server Thread Running__59739
+@2016-01-23 17:49:47 INFO  LibServer:102 - Input from 127.0.0.1:59739 hello
+@2016-01-23 17:49:47 INFO  LibServer:119 - Output to 127.0.0.1:59739 Who Are you?Clerk or User?
+
+@2016-01-23 17:49:50 INFO  LibServer:102 - Input from 127.0.0.1:59739 clerk
+@2016-01-23 17:49:50 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input The Password:
+
+@2016-01-23 17:49:52 INFO  LibServer:102 - Input from 127.0.0.1:59739 admin
+@2016-01-23 17:49:52 INFO  LibServer:111 - Output to 127.0.0.1:59739 What can I do for you?Menu:Create User/Title/Item,Delete User/Title/Item.
+
+@2016-01-23 17:49:57 INFO  LibServer:102 - Input from 127.0.0.1:59739 create user
+@2016-01-23 17:49:57 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input User Info:'username,password'
+
+@2016-01-23 17:50:08 INFO  LibServer:102 - Input from 127.0.0.1:59739 anna@anna.com,anna
+@2016-01-23 17:50:08 INFO  String:44 - Operation:Create New User;User Info:[anna@anna.com,anna];State:Success
+@2016-01-23 17:50:08 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:50:17 INFO  LibServer:102 - Input from 127.0.0.1:59739 create user
+@2016-01-23 17:50:17 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input User Info:'username,password'
+
+@2016-01-23 17:50:23 INFO  LibServer:102 - Input from 127.0.0.1:59739 ryan@123.com,123
+@2016-01-23 17:50:23 INFO  String:44 - Operation:Create New User;User Info:[ryan@123.com,123];State:Success
+@2016-01-23 17:50:23 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:50:30 INFO  LibServer:102 - Input from 127.0.0.1:59739 create title
+@2016-01-23 17:50:30 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Title Info:'ISBN,title'
+
+@2016-01-23 17:50:38 INFO  LibServer:102 - Input from 127.0.0.1:59739 111111111111111,coputer
+@2016-01-23 17:50:38 INFO  LibServer:111 - Output to 127.0.0.1:59739 Your input should in this format:'ISBN,title',ISBN should be a 13-digit number
+
+@2016-01-23 17:50:47 INFO  LibServer:102 - Input from 127.0.0.1:59739 1111111111111,computer
+@2016-01-23 17:50:47 INFO  String:42 - Operation:Create New Title;Title Info:[1111111111111,computer];State:Success
+@2016-01-23 17:50:47 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:50:57 INFO  LibServer:102 - Input from 127.0.0.1:59739 2222222222222.science
+@2016-01-23 17:50:57 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please select from the menu.Menu:Create User/Title/Item,Delete User/Title/Item.
+
+@2016-01-23 17:51:11 INFO  LibServer:102 - Input from 127.0.0.1:59739 create title
+@2016-01-23 17:51:11 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Title Info:'ISBN,title'
+
+@2016-01-23 17:51:19 INFO  LibServer:102 - Input from 127.0.0.1:59739 2222222222222,science
+@2016-01-23 17:51:19 INFO  String:42 - Operation:Create New Title;Title Info:[2222222222222,science];State:Success
+@2016-01-23 17:51:19 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:51:23 INFO  LibServer:102 - Input from 127.0.0.1:59739 create title
+@2016-01-23 17:51:23 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Title Info:'ISBN,title'
+
+@2016-01-23 17:51:30 INFO  LibServer:102 - Input from 127.0.0.1:59739 3333333333333,data
+@2016-01-23 17:51:30 INFO  String:42 - Operation:Create New Title;Title Info:[3333333333333,data];State:Success
+@2016-01-23 17:51:30 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:51:34 INFO  LibServer:102 - Input from 127.0.0.1:59739 create title
+@2016-01-23 17:51:34 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Title Info:'ISBN,title'
+
+@2016-01-23 17:51:43 INFO  LibServer:102 - Input from 127.0.0.1:59739 4444444444444,story
+@2016-01-23 17:51:43 INFO  String:42 - Operation:Create New Title;Title Info:[4444444444444,story];State:Success
+@2016-01-23 17:51:43 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:51:48 INFO  LibServer:102 - Input from 127.0.0.1:59739 create item
+@2016-01-23 17:51:48 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Item Info:'ISBN'
+
+@2016-01-23 17:51:54 INFO  LibServer:102 - Input from 127.0.0.1:59739 11111111111111
+@2016-01-23 17:51:54 INFO  LibServer:111 - Output to 127.0.0.1:59739 Your input should in this format:'ISBN',ISBN should be a 13-digit number
+
+@2016-01-23 17:51:58 INFO  LibServer:102 - Input from 127.0.0.1:59739 1111111111111
+@2016-01-23 17:51:58 INFO  String:44 - Operation:Create New Item;Item Info:[1111111111111,1];State:Success
+@2016-01-23 17:51:58 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:52:02 INFO  LibServer:102 - Input from 127.0.0.1:59739 create item
+@2016-01-23 17:52:02 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Item Info:'ISBN'
+
+@2016-01-23 17:52:06 INFO  LibServer:102 - Input from 127.0.0.1:59739 1111111111111
+@2016-01-23 17:52:06 INFO  String:44 - Operation:Create New Item;Item Info:[1111111111111,2];State:Success
+@2016-01-23 17:52:06 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:52:09 INFO  LibServer:102 - Input from 127.0.0.1:59739 create item
+@2016-01-23 17:52:09 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Item Info:'ISBN'
+
+@2016-01-23 17:52:13 INFO  LibServer:102 - Input from 127.0.0.1:59739 2222222222222
+@2016-01-23 17:52:13 INFO  String:44 - Operation:Create New Item;Item Info:[2222222222222,1];State:Success
+@2016-01-23 17:52:13 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:52:16 INFO  LibServer:102 - Input from 127.0.0.1:59739 create item
+@2016-01-23 17:52:16 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Item Info:'ISBN'
+
+@2016-01-23 17:52:21 INFO  LibServer:102 - Input from 127.0.0.1:59739 3333333333333
+@2016-01-23 17:52:21 INFO  String:44 - Operation:Create New Item;Item Info:[3333333333333,1];State:Success
+@2016-01-23 17:52:21 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:52:24 INFO  LibServer:102 - Input from 127.0.0.1:59739 create item
+@2016-01-23 17:52:24 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Item Info:'ISBN'
+
+@2016-01-23 17:52:29 INFO  LibServer:102 - Input from 127.0.0.1:59739 3333333333333
+@2016-01-23 17:52:29 INFO  String:44 - Operation:Create New Item;Item Info:[3333333333333,2];State:Success
+@2016-01-23 17:52:29 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:52:33 INFO  LibServer:102 - Input from 127.0.0.1:59739 create item
+@2016-01-23 17:52:33 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Item Info:'ISBN'
+
+@2016-01-23 17:52:36 INFO  LibServer:102 - Input from 127.0.0.1:59739 4444444444444
+@2016-01-23 17:52:36 INFO  String:44 - Operation:Create New Item;Item Info:[4444444444444,1];State:Success
+@2016-01-23 17:52:36 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:52:40 INFO  LibServer:102 - Input from 127.0.0.1:59739 create item
+@2016-01-23 17:52:40 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Item Info:'ISBN'
+
+@2016-01-23 17:52:46 INFO  LibServer:102 - Input from 127.0.0.1:59739 4444444444444
+@2016-01-23 17:52:46 INFO  String:44 - Operation:Create New Item;Item Info:[4444444444444,2];State:Success
+@2016-01-23 17:52:46 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:53:11 INFO  LibServer:72 - Client accepted : Client Address : [/127.0.0.1:59769] Client Socket: [59769 ]
+
+@2016-01-23 17:53:11 INFO  LibServer:63 - Waiting for a client ...
+@2016-01-23 17:53:11 INFO  ServerThread:53 - Class: ServerThread: Server Thread Running__59769
+@2016-01-23 17:53:11 INFO  LibClient:31 - 59769 : Connected to server: /127.0.0.1
+@2016-01-23 17:53:11 INFO  LibClient:32 - 59769 : Connected to portid: 59769
+@2016-01-23 17:53:14 INFO  LibServer:102 - Input from 127.0.0.1:59769 hello
+@2016-01-23 17:53:14 INFO  LibServer:119 - Output to 127.0.0.1:59769 Who Are you?Clerk or User?
+
+@2016-01-23 17:53:16 INFO  LibServer:102 - Input from 127.0.0.1:59769 user
+@2016-01-23 17:53:16 INFO  LibServer:111 - Output to 127.0.0.1:59769 Please Input Username and Password:'username,password'
+
+@2016-01-23 17:53:25 INFO  LibServer:102 - Input from 127.0.0.1:59769 anna@anna.com,anna
+@2016-01-23 17:53:25 INFO  LibServer:111 - Output to 127.0.0.1:59769 What can I do for you?Menu:Borrow,Renew,Return,Pay Fine.
+
+@2016-01-23 17:53:33 INFO  LibServer:72 - Client accepted : Client Address : [/127.0.0.1:59771] Client Socket: [59771 ]
+
+@2016-01-23 17:53:33 INFO  LibServer:63 - Waiting for a client ...
+@2016-01-23 17:53:33 INFO  ServerThread:53 - Class: ServerThread: Server Thread Running__59771
+@2016-01-23 17:53:33 INFO  LibClient:31 - 59771 : Connected to server: /127.0.0.1
+@2016-01-23 17:53:33 INFO  LibClient:32 - 59771 : Connected to portid: 59771
+@2016-01-23 17:53:35 INFO  LibServer:102 - Input from 127.0.0.1:59771 hello
+@2016-01-23 17:53:35 INFO  LibServer:119 - Output to 127.0.0.1:59771 Who Are you?Clerk or User?
+
+@2016-01-23 17:53:36 INFO  LibServer:102 - Input from 127.0.0.1:59771 user
+@2016-01-23 17:53:36 INFO  LibServer:111 - Output to 127.0.0.1:59771 Please Input Username and Password:'username,password'
+
+@2016-01-23 17:53:44 INFO  LibServer:102 - Input from 127.0.0.1:59771 ryan@123.com,123
+@2016-01-23 17:53:44 INFO  LibServer:111 - Output to 127.0.0.1:59771 What can I do for you?Menu:Borrow,Renew,Return,Pay Fine.
+
+@2016-01-23 17:53:57 INFO  LibServer:102 - Input from 127.0.0.1:59771 borrow
+@2016-01-23 17:53:57 INFO  LibServer:111 - Output to 127.0.0.1:59771 Please Input User Info:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:54:06 INFO  LibServer:102 - Input from 127.0.0.1:59771 ryan@123.com,1111111111111,2
+@2016-01-23 17:54:06 INFO  String:53 - Operation:Borrow Item;Loan Info:[6,1111111111111,2,2016-01-23 05:54:06];State:Success
+@2016-01-23 17:54:06 INFO  LibServer:111 - Output to 127.0.0.1:59771 Success!
+
+@2016-01-23 17:54:16 INFO  LibServer:102 - Input from 127.0.0.1:59771 borrow
+@2016-01-23 17:54:16 INFO  LibServer:111 - Output to 127.0.0.1:59771 Please Input User Info:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:54:25 INFO  LibServer:102 - Input from 127.0.0.1:59771 ryan@123.com,4444444444444,1
+@2016-01-23 17:54:25 INFO  String:53 - Operation:Borrow Item;Loan Info:[6,4444444444444,1,2016-01-23 05:54:25];State:Success
+@2016-01-23 17:54:25 INFO  LibServer:111 - Output to 127.0.0.1:59771 Success!
+
+@2016-01-23 17:54:31 INFO  LibServer:102 - Input from 127.0.0.1:59769 borrow
+@2016-01-23 17:54:31 INFO  LibServer:111 - Output to 127.0.0.1:59769 Please Input User Info:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:54:41 INFO  LibServer:102 - Input from 127.0.0.1:59769 anna@anna.com,11111111111111,1
+@2016-01-23 17:54:41 INFO  LibServer:111 - Output to 127.0.0.1:59769 Your input should in this format:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:54:50 INFO  LibServer:102 - Input from 127.0.0.1:59769 borrow
+@2016-01-23 17:54:50 INFO  LibServer:111 - Output to 127.0.0.1:59769 Please Input User Info:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:54:54 INFO  LibServer:102 - Input from 127.0.0.1:59769 anna@anna.com,1111111111111,1
+@2016-01-23 17:54:54 INFO  String:53 - Operation:Borrow Item;Loan Info:[5,1111111111111,1,2016-01-23 05:54:54];State:Success
+@2016-01-23 17:54:54 INFO  LibServer:111 - Output to 127.0.0.1:59769 Success!
+
+@2016-01-23 17:54:57 INFO  LibServer:102 - Input from 127.0.0.1:59769 borrow
+@2016-01-23 17:54:57 INFO  LibServer:111 - Output to 127.0.0.1:59769 Please Input User Info:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:55:07 INFO  LibServer:102 - Input from 127.0.0.1:59769 22222222222,1
+@2016-01-23 17:55:07 INFO  LibServer:111 - Output to 127.0.0.1:59769 Your input should in this format:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:55:17 INFO  LibServer:102 - Input from 127.0.0.1:59769 anna@anna.com,2222222222222,1
+@2016-01-23 17:55:17 INFO  String:53 - Operation:Borrow Item;Loan Info:[5,2222222222222,1,2016-01-23 05:55:17];State:Success
+@2016-01-23 17:55:17 INFO  LibServer:111 - Output to 127.0.0.1:59769 Success!
+
+@2016-01-23 17:55:20 INFO  LibServer:102 - Input from 127.0.0.1:59769 borrow
+@2016-01-23 17:55:20 INFO  LibServer:111 - Output to 127.0.0.1:59769 Please Input User Info:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:55:33 INFO  LibServer:102 - Input from 127.0.0.1:59769 anna@anna.com,3333333333333,1
+@2016-01-23 17:55:33 INFO  String:53 - Operation:Borrow Item;Loan Info:[5,3333333333333,1,2016-01-23 05:55:33];State:Success
+@2016-01-23 17:55:33 INFO  LibServer:111 - Output to 127.0.0.1:59769 Success!
+
+@2016-01-23 17:55:52 INFO  LibServer:102 - Input from 127.0.0.1:59771 ryan@123.com,2222222222222,1
+@2016-01-23 17:55:52 INFO  LibServer:111 - Output to 127.0.0.1:59771 Please select from the menu.Menu:Borrow,Renew,Return,Pay Fine.
+
+@2016-01-23 17:55:56 INFO  LibServer:102 - Input from 127.0.0.1:59771 borrow
+@2016-01-23 17:55:56 INFO  LibServer:111 - Output to 127.0.0.1:59771 Please Input User Info:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:55:58 INFO  LibServer:102 - Input from 127.0.0.1:59771 ryan@123.com,2222222222222,1
+@2016-01-23 17:55:58 INFO  String:63 - Operation:Borrow Item;Loan Info:[6,2222222222222,1,2016-01-23 05:55:58];State:Fail;Reason:The Item is Not Available.
+@2016-01-23 17:55:58 INFO  LibServer:111 - Output to 127.0.0.1:59771 The Item is Not Available!
+
+@2016-01-23 17:56:13 INFO  LibServer:102 - Input from 127.0.0.1:59769 borrow
+@2016-01-23 17:56:13 INFO  LibServer:111 - Output to 127.0.0.1:59769 Please Input User Info:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:56:15 INFO  LibServer:102 - Input from 127.0.0.1:59769 anna@anna.com,4444444444444,2
+@2016-01-23 17:56:15 INFO  String:56 - Operation:Borrow Item;Loan Info:[5,4444444444444,2,2016-01-23 05:56:15];State:Fail;Reason:The Maximun Number of Items is Reached.
+@2016-01-23 17:56:15 INFO  LibServer:111 - Output to 127.0.0.1:59769 The Maximun Number of Items is Reached!
+
+@2016-01-23 17:56:23 INFO  LibServer:102 - Input from 127.0.0.1:59771 renew
+@2016-01-23 17:56:23 INFO  LibServer:111 - Output to 127.0.0.1:59771 Please Input Title Info:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:56:25 INFO  LibServer:102 - Input from 127.0.0.1:59771 renew
+@2016-01-23 17:56:25 INFO  LibServer:111 - Output to 127.0.0.1:59771 Your input should in this format:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:56:39 INFO  LibServer:102 - Input from 127.0.0.1:59771 ryan@123.com,1111111111111,2
+@2016-01-23 17:56:39 INFO  String:131 - Operation:Renew Item;Loan Info:[6,1111111111111,2,2016-01-23 05:56:39];State:Success
+@2016-01-23 17:56:39 INFO  LibServer:111 - Output to 127.0.0.1:59771 Success!
+
+@2016-01-23 17:56:48 INFO  LibServer:102 - Input from 127.0.0.1:59769 return
+@2016-01-23 17:56:48 INFO  LibServer:111 - Output to 127.0.0.1:59769 Please Input Item Info:'useremail,ISBN,copynumber'
+
+@2016-01-23 17:56:58 INFO  LibServer:102 - Input from 127.0.0.1:59769 anna@anna.com,1111111111111,1
+@2016-01-23 17:56:58 INFO  String:174 - Operation:Return Item;Loan Info:[5,1111111111111,1,2016-01-23 05:56:58];State:Success
+@2016-01-23 17:56:58 INFO  LibServer:111 - Output to 127.0.0.1:59769 Success!
+
+@2016-01-23 17:57:09 INFO  LibServer:102 - Input from 127.0.0.1:59739 delete user
+@2016-01-23 17:57:09 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input User Info:'useremail'
+
+@2016-01-23 17:57:14 INFO  LibServer:102 - Input from 127.0.0.1:59739 sun@carleton.ca
+@2016-01-23 17:57:14 INFO  String:100 - Operation:Delete User;User Info:[Sun@carleton.ca,Sun];State:Success
+@2016-01-23 17:57:14 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:57:21 INFO  LibServer:102 - Input from 127.0.0.1:59739 delete title
+@2016-01-23 17:57:21 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Title Info:'ISBN'
+
+@2016-01-23 17:57:34 INFO  LibServer:102 - Input from 127.0.0.1:59739 9781317594277
+@2016-01-23 17:57:34 INFO  String:84 - Operation:Delete Title;Title Info:[9781317594277,The act in context];State:Success
+@2016-01-23 17:57:34 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:57:40 INFO  LibServer:102 - Input from 127.0.0.1:59739 delete copy
+@2016-01-23 17:57:40 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please select from the menu.Menu:Create User/Title/Item,Delete User/Title/Item.
+
+@2016-01-23 17:57:49 INFO  LibServer:102 - Input from 127.0.0.1:59739 delete item
+@2016-01-23 17:57:49 INFO  LibServer:111 - Output to 127.0.0.1:59739 Please Input Item Info:'ISBN,copynumber'
+
+@2016-01-23 17:57:54 INFO  LibServer:102 - Input from 127.0.0.1:59739 444444444444444,2
+@2016-01-23 17:57:54 INFO  LibServer:111 - Output to 127.0.0.1:59739 Your input should in this format:'ISBN,copynumber',ISBN should be a 13-digit number
+
+@2016-01-23 17:58:03 INFO  LibServer:102 - Input from 127.0.0.1:59739 4444444444444,2
+@2016-01-23 17:58:03 INFO  String:91 - Operation:Delete Item;Item Info:[4444444444444,N/A];State:Success
+@2016-01-23 17:58:03 INFO  LibServer:111 - Output to 127.0.0.1:59739 Success!
+
+@2016-01-23 17:58:18 INFO  LibServer:102 - Input from 127.0.0.1:59769 log out
+@2016-01-23 17:58:18 INFO  LibServer:111 - Output to 127.0.0.1:59769 Successfully Log Out!
+
+@2016-01-23 17:58:20 INFO  LibServer:102 - Input from 127.0.0.1:59769 hello
+@2016-01-23 17:58:20 INFO  LibServer:111 - Output to 127.0.0.1:59769 Who Are you?Clerk or User?
+
+@2016-01-23 17:58:23 INFO  LibServer:102 - Input from 127.0.0.1:59769 user
+@2016-01-23 17:58:23 INFO  LibServer:111 - Output to 127.0.0.1:59769 Please Input Username and Password:'username,password'
+
+@2016-01-23 17:58:29 INFO  LibServer:102 - Input from 127.0.0.1:59769 zhibo@carleton.ca,zhibo
+@2016-01-23 17:58:29 INFO  LibServer:111 - Output to 127.0.0.1:59769 What can I do for you?Menu:Borrow,Renew,Return,Pay Fine.
+
+@2016-01-23 17:58:33 INFO  LibServer:102 - Input from 127.0.0.1:59769 pay fine
+@2016-01-23 17:58:33 INFO  LibServer:111 - Output to 127.0.0.1:59769 Please Input User Info:'useremail'
+
+@2016-01-23 17:58:42 INFO  LibServer:102 - Input from 127.0.0.1:59769 zhibo@carleton.ca
+@2016-01-23 17:58:42 INFO  String:144 - Operation:Pay Fine;Fee Info:[0,5];State:Fail;Reason:Borrowing Items Exist.
+@2016-01-23 17:58:42 INFO  LibServer:111 - Output to 127.0.0.1:59769 Borrowing Items Exist!
+
+@2016-01-23 17:58:54 INFO  LibServer:102 - Input from 127.0.0.1:59769 log out
+@2016-01-23 17:58:54 INFO  LibServer:111 - Output to 127.0.0.1:59769 Successfully Log Out!
+
+@2016-01-23 17:59:05 INFO  LibServer:102 - Input from 127.0.0.1:59769 hello
+@2016-01-23 17:59:05 INFO  LibServer:111 - Output to 127.0.0.1:59769 Who Are you?Clerk or User?
+
+@2016-01-23 17:59:07 INFO  LibServer:102 - Input from 127.0.0.1:59769 user
+@2016-01-23 17:59:07 INFO  LibServer:111 - Output to 127.0.0.1:59769 Please Input Username and Password:'username,password'
+
+@2016-01-23 17:59:23 INFO  LibServer:102 - Input from 127.0.0.1:59769 kevin@carleton.ca,kevin
+@2016-01-23 17:59:23 INFO  LibServer:111 - Output to 127.0.0.1:59769 What can I do for you?Menu:Borrow,Renew,Return,Pay Fine.
+
+@2016-01-23 17:59:26 INFO  LibServer:102 - Input from 127.0.0.1:59769 pay fine
+@2016-01-23 17:59:26 INFO  LibServer:111 - Output to 127.0.0.1:59769 Please Input User Info:'useremail'
+
+@2016-01-23 17:59:32 INFO  LibServer:102 - Input from 127.0.0.1:59769 kevein@carleton.ca
+@2016-01-23 17:59:32 INFO  LibServer:111 - Output to 127.0.0.1:59769 The User Does Not Exist!
+
+@2016-01-23 17:59:44 INFO  LibServer:102 - Input from 127.0.0.1:59769 kevin@carleton.ca
+@2016-01-23 17:59:44 INFO  String:149 - Operation:Pay Fine;Fee Info:[3,0];State:Success
+@2016-01-23 17:59:44 INFO  LibServer:111 - Output to 127.0.0.1:59769 Success!
+
+@2016-01-23 17:59:48 INFO  LibServer:102 - Input from 127.0.0.1:59769 exit
+@2016-01-23 17:59:48 INFO  LibServer:111 - Output to 127.0.0.1:59769 Please select from the menu.Menu:Borrow,Renew,Return,Pay Fine.
+
+@2016-01-23 17:59:51 INFO  LibServer:92 - Client: 59769 Exits
+@2016-01-23 17:59:51 INFO  LibServer:96 - Client : 59769Exits
+@2016-01-23 17:59:57 INFO  LibServer:92 - Client: 59771 Exits
+@2016-01-23 17:59:57 INFO  LibServer:96 - Client : 59771Exits
+@2016-01-23 18:00:03 INFO  LibServer:92 - Client: 59739 Exits
+@2016-01-23 18:00:03 INFO  LibServer:96 - Client : 59739Exits
+@2016-01-26 14:30:09 INFO  LibServer:34 - Binding to port 5050
+@2016-01-26 14:30:09 INFO  LibServer:63 - Waiting for a client ...
+@2016-01-26 14:30:09 INFO  LibServer:48 - Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=5050] 10
+@2016-01-26 14:30:09 INFO  String:25 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2016-01-26 14:30:09 INFO  String:23 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry ], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context]]
+@2016-01-26 14:30:09 INFO  String:25 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1]]
+@2016-01-26 14:30:09 INFO  String:25 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2016-01-26 02:30:09,0]]
+@2016-01-26 14:30:09 INFO  String:98 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2016-01-26 14:30:09 INFO  String:122 - Operation:Initialize FeeTable;FeeTable: [[0,5]]
+@2016-01-26 14:30:32 INFO  LibServer:72 - Client accepted : Client Address : [/127.0.0.1:49267] Client Socket: [49267 ]
+
+@2016-01-26 14:30:32 INFO  LibServer:63 - Waiting for a client ...
+@2016-01-26 14:30:32 INFO  LibClient:31 - 49267 : Connected to server: /127.0.0.1
+@2016-01-26 14:30:32 INFO  ServerThread:53 - Class: ServerThread: Server Thread Running__49267
+@2016-01-26 14:30:32 INFO  LibClient:32 - 49267 : Connected to portid: 49267
+@2016-01-26 14:30:39 INFO  LibServer:102 - Input from 127.0.0.1:49267 hello
+@2016-01-26 14:30:39 INFO  LibServer:119 - Output to 127.0.0.1:49267 Who Are you?Clerk or User?
+
+@2016-01-26 14:30:44 INFO  LibServer:102 - Input from 127.0.0.1:49267 clerk
+@2016-01-26 14:30:44 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input The Password:
+
+@2016-01-26 14:30:47 INFO  LibServer:102 - Input from 127.0.0.1:49267 admin
+@2016-01-26 14:30:47 INFO  LibServer:111 - Output to 127.0.0.1:49267 What can I do for you?Menu:Create User/Title/Item,Delete User/Title/Item.
+
+@2016-01-26 14:31:15 INFO  LibServer:102 - Input from 127.0.0.1:49267 create user
+@2016-01-26 14:31:15 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input User Info:'username,password'
+
+@2016-01-26 14:31:28 INFO  LibServer:102 - Input from 127.0.0.1:49267 anna@anna.com,anna
+@2016-01-26 14:31:28 INFO  String:44 - Operation:Create New User;User Info:[anna@anna.com,anna];State:Success
+@2016-01-26 14:31:28 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
+
+@2016-01-26 14:31:35 INFO  LibServer:102 - Input from 127.0.0.1:49267 create title
+@2016-01-26 14:31:35 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input Title Info:'ISBN,title'
+
+@2016-01-26 14:32:02 INFO  LibServer:102 - Input from 127.0.0.1:49267 1111111111111,computer
+@2016-01-26 14:32:02 INFO  String:42 - Operation:Create New Title;Title Info:[1111111111111,computer];State:Success
+@2016-01-26 14:32:02 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
+
+@2016-01-26 14:32:12 INFO  LibServer:102 - Input from 127.0.0.1:49267 create item
+@2016-01-26 14:32:12 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input Item Info:'ISBN'
+
+@2016-01-26 14:32:20 INFO  LibServer:102 - Input from 127.0.0.1:49267 1111111111111
+@2016-01-26 14:32:20 INFO  String:44 - Operation:Create New Item;Item Info:[1111111111111,1];State:Success
+@2016-01-26 14:32:20 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
+
+@2016-01-26 14:32:34 INFO  LibServer:102 - Input from 127.0.0.1:49267 delete user
+@2016-01-26 14:32:34 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input User Info:'useremail'
+
+@2016-01-26 14:32:40 INFO  LibServer:102 - Input from 127.0.0.1:49267 anna@anna.com
+@2016-01-26 14:32:40 INFO  String:100 - Operation:Delete User;User Info:[anna@anna.com,anna];State:Success
+@2016-01-26 14:32:40 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
+
+@2016-01-26 14:32:46 INFO  LibServer:102 - Input from 127.0.0.1:49267 delete item
+@2016-01-26 14:32:46 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input Item Info:'ISBN,copynumber'
+
+@2016-01-26 14:32:57 INFO  LibServer:102 - Input from 127.0.0.1:49267 1111111111111,1
+@2016-01-26 14:32:57 INFO  String:91 - Operation:Delete Item;Item Info:[1111111111111,N/A];State:Success
+@2016-01-26 14:32:57 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
+
+@2016-01-26 14:33:03 INFO  LibServer:102 - Input from 127.0.0.1:49267 delete title
+@2016-01-26 14:33:03 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input Title Info:'ISBN'
+
+@2016-01-26 14:33:13 INFO  LibServer:102 - Input from 127.0.0.1:49267 1111111111111
+@2016-01-26 14:33:13 INFO  String:107 - Operation:Delete Item Due to Title Deletion;ISBN Info:[1111111111111];State:Success
+@2016-01-26 14:33:13 INFO  String:84 - Operation:Delete Title;Title Info:[1111111111111,computer];State:Success
+@2016-01-26 14:33:13 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
+
+@2016-01-26 14:33:25 INFO  LibServer:102 - Input from 127.0.0.1:49267 log out
+@2016-01-26 14:33:25 INFO  LibServer:111 - Output to 127.0.0.1:49267 Successfully Log Out!
+
+@2016-01-26 14:33:28 INFO  LibServer:102 - Input from 127.0.0.1:49267 hello
+@2016-01-26 14:33:28 INFO  LibServer:111 - Output to 127.0.0.1:49267 Who Are you?Clerk or User?
+
+@2016-01-26 14:33:30 INFO  LibServer:102 - Input from 127.0.0.1:49267 user
+@2016-01-26 14:33:30 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input Username and Password:'username,password'
+
+@2016-01-26 14:33:45 INFO  LibServer:102 - Input from 127.0.0.1:49267 zhibo@carleton.ca,zhibo
+@2016-01-26 14:33:45 INFO  LibServer:111 - Output to 127.0.0.1:49267 What can I do for you?Menu:Borrow,Renew,Return,Pay Fine.
+
+@2016-01-26 14:33:48 INFO  LibServer:102 - Input from 127.0.0.1:49267 borrow
+@2016-01-26 14:33:48 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input User Info:'useremail,ISBN,copynumber'
+
+@2016-01-26 14:34:14 INFO  LibServer:102 - Input from 127.0.0.1:49267 zhibo@carleton.ca,9781442616899,1
+@2016-01-26 14:34:14 INFO  String:59 - Operation:Borrow Item;Loan Info:[0,9781442616899,1,2016-01-26 02:34:14];State:Fail;Reason:Outstanding Fee Exists.
+@2016-01-26 14:34:14 INFO  LibServer:111 - Output to 127.0.0.1:49267 Outstanding Fee Exists!
+
+@2016-01-26 14:34:21 INFO  LibServer:102 - Input from 127.0.0.1:49267 log out
+@2016-01-26 14:34:21 INFO  LibServer:111 - Output to 127.0.0.1:49267 Successfully Log Out!
+
+@2016-01-26 14:34:23 INFO  LibServer:102 - Input from 127.0.0.1:49267 hello
+@2016-01-26 14:34:23 INFO  LibServer:111 - Output to 127.0.0.1:49267 Who Are you?Clerk or User?
+
+@2016-01-26 14:34:25 INFO  LibServer:102 - Input from 127.0.0.1:49267 user
+@2016-01-26 14:34:25 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input Username and Password:'username,password'
+
+@2016-01-26 14:34:38 INFO  LibServer:102 - Input from 127.0.0.1:49267 kevin@carleton,kevin
+@2016-01-26 14:34:38 INFO  LibServer:111 - Output to 127.0.0.1:49267 The User Does Not Exist!Please The Username and Password:'username,password'
+
+@2016-01-26 14:34:52 INFO  LibServer:102 - Input from 127.0.0.1:49267 yu@carleton.ca,yu
+@2016-01-26 14:34:52 INFO  LibServer:111 - Output to 127.0.0.1:49267 What can I do for you?Menu:Borrow,Renew,Return,Pay Fine.
+
+@2016-01-26 14:34:55 INFO  LibServer:102 - Input from 127.0.0.1:49267 borrow
+@2016-01-26 14:34:55 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input User Info:'useremail,ISBN,copynumber'
+
+@2016-01-26 14:35:05 INFO  LibServer:102 - Input from 127.0.0.1:49267 yu@carleton,9781442616899,1
+@2016-01-26 14:35:05 INFO  LibServer:111 - Output to 127.0.0.1:49267 The User Does Not Exist!
+
+@2016-01-26 14:35:16 INFO  LibServer:102 - Input from 127.0.0.1:49267 borrow
+@2016-01-26 14:35:16 INFO  LibServer:111 - Output to 127.0.0.1:49267 Your input should in this format:'useremail,ISBN,copynumber'
+
+@2016-01-26 14:35:29 INFO  LibServer:102 - Input from 127.0.0.1:49267 yu@carleton.ca,9781442616899,1
+@2016-01-26 14:35:29 INFO  String:53 - Operation:Borrow Item;Loan Info:[1,9781442616899,1,2016-01-26 02:35:29];State:Success
+@2016-01-26 14:35:29 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
+
+@2016-01-26 14:35:34 INFO  LibServer:102 - Input from 127.0.0.1:49267 renew
+@2016-01-26 14:35:34 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input Title Info:'useremail,ISBN,copynumber'
+
+@2016-01-26 14:35:57 INFO  LibServer:102 - Input from 127.0.0.1:49267 yu@carleton.ca,9781442616899,1
+@2016-01-26 14:35:57 INFO  String:131 - Operation:Renew Item;Loan Info:[1,9781442616899,1,2016-01-26 02:35:57];State:Success
+@2016-01-26 14:35:57 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
+
+@2016-01-26 14:36:07 INFO  LibServer:102 - Input from 127.0.0.1:49267 return
+@2016-01-26 14:36:07 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input Item Info:'useremail,ISBN,copynumber'
+
+@2016-01-26 14:36:27 INFO  LibServer:102 - Input from 127.0.0.1:49267 yu@carleton.ca,9781442616899,1
+@2016-01-26 14:36:27 INFO  String:174 - Operation:Return Item;Loan Info:[1,9781442616899,1,2016-01-26 02:36:27];State:Success
+@2016-01-26 14:36:27 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
+
+@2016-01-26 14:36:37 INFO  LibServer:102 - Input from 127.0.0.1:49267 pay fine
+@2016-01-26 14:36:37 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input User Info:'useremail'
+
+@2016-01-26 14:36:43 INFO  LibServer:102 - Input from 127.0.0.1:49267 yu@carleton.ca
+@2016-01-26 14:36:43 INFO  String:149 - Operation:Pay Fine;Fee Info:[1,0];State:Success
+@2016-01-26 14:36:43 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
+
+@2016-01-26 14:36:47 INFO  LibServer:102 - Input from 127.0.0.1:49267 log out
+@2016-01-26 14:36:47 INFO  LibServer:111 - Output to 127.0.0.1:49267 Successfully Log Out!
+
+@2016-01-26 14:36:49 INFO  LibServer:102 - Input from 127.0.0.1:49267 hello
+@2016-01-26 14:36:49 INFO  LibServer:111 - Output to 127.0.0.1:49267 Who Are you?Clerk or User?
+
+@2016-01-26 14:36:52 INFO  LibServer:102 - Input from 127.0.0.1:49267 user
+@2016-01-26 14:36:52 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input Username and Password:'username,password'
+
+@2016-01-26 14:36:59 INFO  LibServer:102 - Input from 127.0.0.1:49267 zhibo@carleton.ca,zhibo
+@2016-01-26 14:36:59 INFO  LibServer:111 - Output to 127.0.0.1:49267 What can I do for you?Menu:Borrow,Renew,Return,Pay Fine.
+
+@2016-01-26 14:37:04 INFO  LibServer:102 - Input from 127.0.0.1:49267 pay fine
+@2016-01-26 14:37:04 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input User Info:'useremail'
+
+@2016-01-26 14:37:14 INFO  LibServer:102 - Input from 127.0.0.1:49267 zhibo@carleton.ca
+@2016-01-26 14:37:14 INFO  String:144 - Operation:Pay Fine;Fee Info:[0,0];State:Fail;Reason:Borrowing Items Exist.
+@2016-01-26 14:37:14 INFO  LibServer:111 - Output to 127.0.0.1:49267 Borrowing Items Exist!
+
+@2016-01-26 14:37:27 INFO  LibServer:102 - Input from 127.0.0.1:49267 return
+@2016-01-26 14:37:27 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input Item Info:'useremail,ISBN,copynumber'
+
+@2016-01-26 14:37:50 INFO  LibServer:102 - Input from 127.0.0.1:49267 zhibo@carleton.ca,9781442668584,1
+@2016-01-26 14:37:50 INFO  String:174 - Operation:Return Item;Loan Info:[0,9781442668584,1,2016-01-26 02:37:50];State:Success
+@2016-01-26 14:37:50 INFO  String:104 - Operation:Apply OutStanding Fee;Fee Info:[0,2];State:Success
+@2016-01-26 14:37:50 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
+
+@2016-01-26 14:37:55 INFO  LibServer:102 - Input from 127.0.0.1:49267 pay fine
+@2016-01-26 14:37:55 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input User Info:'useremail'
+
+@2016-01-26 14:38:00 INFO  LibServer:102 - Input from 127.0.0.1:49267 zhibo@carleton.ca
+@2016-01-26 14:38:00 INFO  String:149 - Operation:Pay Fine;Fee Info:[0,2];State:Success
+@2016-01-26 14:38:00 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
+
+@2016-01-26 14:38:05 INFO  LibServer:102 - Input from 127.0.0.1:49267 borrow
+@2016-01-26 14:38:05 INFO  LibServer:111 - Output to 127.0.0.1:49267 Please Input User Info:'useremail,ISBN,copynumber'
+
+@2016-01-26 14:38:18 INFO  LibServer:102 - Input from 127.0.0.1:49267 zhibo@carleton.ca,9781442668584,1
+@2016-01-26 14:38:18 INFO  String:53 - Operation:Borrow Item;Loan Info:[0,9781442668584,1,2016-01-26 02:38:18];State:Success
+@2016-01-26 14:38:18 INFO  LibServer:111 - Output to 127.0.0.1:49267 Success!
