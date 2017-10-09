@@ -218,4 +218,17 @@ public class ServerLogicTest {
 			} 
 		}
 	}
+	
+	@Test
+	public void UserLoginTest() {
+		//correct username/password and state
+		so = sinhandler.processInput("Zhibo@carleton.ca,Zhibo", 41);
+		assertTrue(so.getState() == 40);
+		//incorrect username/password - correct state
+		so = sinhandler.processInput("Yu@carleton.ca,password", 41);
+		assertFalse(so.getState() == 40);
+		//correct username/password - incorrect state
+		so = sinhandler.processInput("Yu@carleton.ca,Yu", 11);
+		assertFalse(so.getState() == 40);
+	}
 }

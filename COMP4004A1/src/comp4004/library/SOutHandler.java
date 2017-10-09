@@ -21,6 +21,9 @@ public class SOutHandler {
 	public static final int DELETEUSER = 30;
 	public static final int DELETETITLE = 31;
 	public static final int DELETEITEM = 32;
+	//User States
+	public static final int USER = 40;
+	public static final int USERLOGIN = 41;
 	
 	
 	public SOutput clerkLogin(String input) {
@@ -167,6 +170,31 @@ public class SOutHandler {
             		output.setOutput(result+"!");
             	}
             	output.setState(CLERK);
+        	}
+        }
+		return output;
+	}
+	
+	public SOutput userLogin(String input) {
+		SOutput output=new SOutput("",0);
+		String[] strArray = null;   
+        strArray = input.split(",");
+        boolean email=strArray[0].contains("@");
+        int result=0;
+        if(strArray.length!=2 || email!=true){
+        	output.setOutput("Your input should in this format:'username,password'");
+        	output.setState(USERLOGIN);
+        }else{
+        	result=UserTable.getInstance().checkUser(strArray[0], strArray[1]);
+        	if(result==0){
+        		output.setOutput("What can I do for you?Menu:Borrow,Renew,Return,Pay Fine.");
+            	output.setState(USER);
+        	}else if(result==1){
+        		output.setOutput("Wrong Password!Please Input Username and Password:'username,password'");
+            	output.setState(USERLOGIN);
+        	}else{
+        		output.setOutput("The User Does Not Exist!Please The Username and Password:'username,password'");
+            	output.setState(USERLOGIN);
         	}
         }
 		return output;

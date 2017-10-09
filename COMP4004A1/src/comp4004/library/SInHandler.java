@@ -18,6 +18,9 @@ public class SInHandler {
 	public static final int DELETEUSER = 30;
 	public static final int DELETETITLE = 31;
 	public static final int DELETEITEM = 32;
+	//User States
+	public static final int USER = 40;
+	public static final int USERLOGIN = 41;
 	
 	SOutHandler southandler = new SOutHandler();
 	
@@ -36,9 +39,25 @@ public class SInHandler {
 	            	state=CLERKLOGIN;
 	                oo.setOutput(output);
 		            oo.setState(state);
+	            }else if (input.equalsIgnoreCase("user")) {
+	            	output="Please Input Username and Password:'username,password'";
+	            	state=USERLOGIN;
+	                oo.setOutput(output);
+		            oo.setState(state);
+	            }else{
+	            	output = "Who Are you?Clerk or User?";
+	            	state = FINISHWAIT;
+	            	oo.setOutput(output);
+		            oo.setState(state);
 	            }
 	         }else if(state==CLERKLOGIN){
 		        	o=southandler.clerkLogin(input);
+	        		output=o.getOutput();
+	        		state=o.getState();
+	        		oo.setOutput(output);
+		            oo.setState(state);
+	         }else if(state==USERLOGIN){
+		        	o=southandler.userLogin(input);
 	        		output=o.getOutput();
 	        		state=o.getState();
 	        		oo.setOutput(output);
@@ -200,6 +219,23 @@ public class SInHandler {
 		        		oo.setOutput(output);
 			            oo.setState(state);
 		        	}
+	         }else if (state==USER){
+		        	if(input.equalsIgnoreCase("log out")){
+		            	output = "Successfully Log Out!";
+		                state = WAIT;
+		                oo.setOutput(output);
+			            oo.setState(state);
+		            }else if(input.equalsIgnoreCase("main menu")){
+		        		output = "What can I do for you?Menu:Borrow,Renew,Return,Pay Fine.";
+		                state = USER;
+		                oo.setOutput(output);
+			            oo.setState(state);
+		        	}else{
+		            	output = "Please select from the menu.Menu:Borrow,Renew,Return,Pay Fine.";
+		                state = USER;
+		                oo.setOutput(output);
+			            oo.setState(state);
+		            }
 	         }
 		 return oo;
 	}
