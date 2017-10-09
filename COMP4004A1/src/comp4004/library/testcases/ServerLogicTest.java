@@ -96,4 +96,25 @@ public class ServerLogicTest {
 			fail("book added to list regardless");
 		}
 	}
+	
+	@Test
+	public void CreateItemTest() {
+		Object result="";
+		
+		//create additional copy of existing book
+		result = ItemTable.getInstance().createitem("9781442668584");
+		assertTrue(result.equals(true));
+		
+		List<Item> temp = ItemTable.getInstance().getItemTable();
+		for (int i=0; i<temp.size(); i++) {
+			if (temp.get(i).getISBN() == "9781442668584" && temp.get(i).getCopynumber() != "1") {
+				assertTrue(temp.get(i).getCopynumber().equals("2"));
+			} else {
+				assertTrue(temp.get(i).getCopynumber().equals("1"));
+			}
+		}
+		//Cannot create 2nd copy of book with out first copy
+		result = ItemTable.getInstance().createitem("1112223334444");
+		assertFalse(result.equals(true));
+	}
 }

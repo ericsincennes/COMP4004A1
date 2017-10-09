@@ -13,6 +13,7 @@ public class SInHandler {
 	//Creation States
 	public static final int CREATEUSER = 20;
 	public static final int CREATETITLE = 21;
+	public static final int CREATEITEM = 22;
 	
 	SOutHandler southandler = new SOutHandler();
 	
@@ -50,6 +51,11 @@ public class SInHandler {
 		            	output = "Please Input Title Info:'ISBN,title'";
 		            	state=CREATETITLE;
 		            	oo.setOutput(output);
+			            oo.setState(state);
+	        	 	}else if (input.equalsIgnoreCase("create item")) {
+			            output = "Please Input Item Info:'ISBN'";
+			            state=CREATEITEM;
+			            oo.setOutput(output);
 			            oo.setState(state);
 	        	 	}else if(input.equalsIgnoreCase("log out")){
 	        	 		output = "Successfully Log Out!";
@@ -103,8 +109,25 @@ public class SInHandler {
 		        		oo.setOutput(output);
 			            oo.setState(state);
 		        	}
+	         }else if(state==CREATEITEM){
+		        	if(input.equalsIgnoreCase("log out")){
+		            	output = "Successfully Log Out!";
+		                state = WAIT;
+		                oo.setOutput(output);
+			            oo.setState(state);
+		        	}else if(input.equalsIgnoreCase("main menu")){
+		        		output = "What can I do for you?Menu:Create User/Title/Item,Delete User/Title/Item.";
+		                state = CLERK;
+		                oo.setOutput(output);
+			            oo.setState(state);
+		        	}else{
+		        		o=southandler.createItem(input);
+		        		output=o.getOutput();
+		        		state=o.getState();
+		        		oo.setOutput(output);
+			            oo.setState(state);
+		        	}
 	         }
-		 
 		 return oo;
 	}
 }
