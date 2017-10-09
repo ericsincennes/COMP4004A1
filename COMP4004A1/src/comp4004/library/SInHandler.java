@@ -25,6 +25,7 @@ public class SInHandler {
 	public static final int BORROW = 50;
 	public static final int RENEW = 51;
 	public static final int RETURN = 52;
+	public static final int PAYFINE = 53;
 	
 	SOutHandler southandler = new SOutHandler();
 	
@@ -239,6 +240,11 @@ public class SInHandler {
 			            state=RETURN;
 			            oo.setOutput(output);
 			            oo.setState(state);
+	        	 	}else if (input.equalsIgnoreCase("pay fine")) {
+		            	output = "Please Input User Info:'useremail'";
+		            	state=PAYFINE;
+		            	oo.setOutput(output);
+			            oo.setState(state);
 	        	 	}else if(input.equalsIgnoreCase("log out")){
 		            	output = "Successfully Log Out!";
 		                state = WAIT;
@@ -309,7 +315,25 @@ public class SInHandler {
 		        		oo.setOutput(output);
 			            oo.setState(state);
 		        	}
-	         }
+	         }else if(state==PAYFINE){
+		        	if(input.equalsIgnoreCase("log out")){
+		            	output = "Successfully Log Out!";
+		                state = WAIT;
+		                oo.setOutput(output);
+			            oo.setState(state);
+		        	}else if(input.equalsIgnoreCase("main menu")){
+		        		output = "What can I do for you?Menu:Borrow,Renew,Return,Pay Fine.";
+		                state = USER;
+		                oo.setOutput(output);
+			            oo.setState(state);
+		        	}else{
+		        		o=southandler.payFine(input);
+		        		output=o.getOutput();
+		        		state=o.getState();
+		        		oo.setOutput(output);
+			            oo.setState(state);
+		        	}
+		        }
 		 return oo;
 	}
 }

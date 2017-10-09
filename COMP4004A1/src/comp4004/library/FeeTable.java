@@ -7,6 +7,8 @@ import java.util.List;
 import comp4004.library.Fee;
 import comp4004.library.Loan;
 import comp4004.library.UtilConfig;
+import comp4004.library.FeeTable;
+import comp4004.library.LoanTable;
 
 
 public class FeeTable {
@@ -17,6 +19,8 @@ public class FeeTable {
     private FeeTable(){
     	//set up the default list with some instances
     	Fee fee=new Fee(0,5);
+    	feeList.add(fee);
+    	fee=new Fee(3,5);
     	feeList.add(fee);
     	Initialization();
     };
@@ -101,9 +105,36 @@ public class FeeTable {
 				feeList.add(fee);
 			}
 		}
-		
-		
 	}
+	
+	public Object payfine(int i) {
+		String result="";
+		boolean oloan=LoanTable.getInstance().looklimit(i);
+		int fee=0;
+		int index=0;
+		boolean user=FeeTable.getInstance().checkuser(i);
+		if(user){
+			for(int m=0;m<feeList.size();m++){
+				if(feeList.get(m).getUserid()==i){
+					fee=feeList.get(m).getFee();
+					index=m;
+				}else{
+					fee=0;
+				}
+			}
+		}else{
+			fee=0;
+		}
+		if(oloan==false){
+			result="Borrowing Items Exist";
+		}else{
+			feeList.get(index).setUserid(i);
+			feeList.get(index).setFee(0);
+			result="success";
+		}
+		return result;
+	}
+	
 	public List<Fee> getFeeTable() {
 		return feeList;
 	}

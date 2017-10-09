@@ -283,4 +283,14 @@ public class ServerUseCases {
 		result = LoanTable.getInstance().returnItem(2, "9781442667181", "1", new Date());
 		assertTrue(result.equals("The Loan Does Not Exist"));
 	}
+	
+	@Test
+	public void PayFineTest() {
+		//paying fine
+		result = FeeTable.getInstance().payfine(3);
+		assertTrue(result.equals("success"));
+		//paying fine with outstanding loans
+		result = FeeTable.getInstance().payfine(0);
+		assertTrue(result.equals("Borrowing Items Exist"));
+	}
 }

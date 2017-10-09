@@ -2,6 +2,7 @@ package comp4004.library;
 
 import comp4004.library.SOutput;
 import comp4004.library.UtilConfig;
+import comp4004.library.FeeTable;
 import comp4004.library.LoanTable;
 
 import java.util.Date;
@@ -32,6 +33,7 @@ public class SOutHandler {
 	public static final int BORROW = 50;
 	public static final int RENEW = 51;
 	public static final int RETURN = 52;
+	public static final int PAYFINE = 53;
 	
 	public SOutput clerkLogin(String input) {
 		SOutput out = new SOutput("", 0);
@@ -302,6 +304,32 @@ public class SOutHandler {
         }
 		return output;
 
+	}
+	
+	public SOutput payFine(String input) {
+		SOutput output=new SOutput("",0);
+		String[] strArray = null;   
+        strArray = input.split(",");
+        boolean email=strArray[0].contains("@");
+        int userid=UserTable.getInstance().lookup(strArray[0]);
+        Object result="";
+        if(strArray.length!=1 || email!=true){
+        	output.setOutput("Your input should in this format:'useremail'");
+        	output.setState(PAYFINE);
+        }else if(userid==-1){
+        	output.setOutput("The User Does Not Exist!");
+        	output.setState(PAYFINE);
+        }else{
+        	result=FeeTable.getInstance().payfine(userid);	
+        	if(result.equals("success")){
+        		output.setOutput("Success!");
+        		}else{
+            		output.setOutput(result+"!");
+            	}
+        		output.setState(USER);
+        	}
+        	
+		return output;
 	}
 	
 	public static boolean isInteger(String value) {
