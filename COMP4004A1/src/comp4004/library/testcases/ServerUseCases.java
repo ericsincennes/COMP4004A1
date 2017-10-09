@@ -271,4 +271,16 @@ public class ServerUseCases {
 		result = LoanTable.getInstance().renewal(2, "9781442667181", "1", new Date());
 		assertTrue(result.equals("The loan does not exist"));
 	}
+	
+	@Test
+	public void ReturnTest() {
+		//create loan to be returned
+		result = LoanTable.getInstance().createloan(2, "9781236565459", "1", new Date());
+		//returning a loaned book
+		result = LoanTable.getInstance().returnItem(2, "9781236565459", "1", new Date());
+		assertTrue(result.equals("success"));
+		//returning a book that hasnt been loaned
+		result = LoanTable.getInstance().returnItem(2, "9781442667181", "1", new Date());
+		assertTrue(result.equals("The Loan Does Not Exist"));
+	}
 }

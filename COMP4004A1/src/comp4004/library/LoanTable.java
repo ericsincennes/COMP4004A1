@@ -102,6 +102,35 @@ public class LoanTable {
 		return result;
 	}
 	
+	public Object returnItem(int j, String string, String string2, Date date) {
+		String result="";
+		int flag=0;
+		int index=0;
+		for(int i=0;i<loanList.size();i++){
+			String ISBN=(loanList.get(i)).getIsbn();
+			String copynumber=(loanList.get(i)).getCopynumber();
+			int userid=(loanList.get(i)).getUserid();
+			if((userid==j) && ISBN.equalsIgnoreCase(string) && copynumber.equalsIgnoreCase(string2)){
+				flag=flag+1;
+				index=i;
+			}else{
+				flag=flag+0;	
+			}
+		}
+		if(flag!=0){
+			long time = date.getTime()-loanList.get(index).getDate().getTime();
+			loanList.remove(index);
+			if(time>UtilConfig.OVERDUE*UtilConfig.SIMULATED_DAY){
+				FeeTable.getInstance().applyfee(j,time);
+			}
+			result="success";
+		}else{
+			result="The Loan Does Not Exist";
+		}
+		
+		return result;
+	}
+	
 	public boolean lookup(int j, String string, String string2) {
 		boolean result=true;
 		int flag=0;

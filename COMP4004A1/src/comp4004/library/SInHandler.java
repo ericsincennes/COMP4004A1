@@ -24,6 +24,7 @@ public class SInHandler {
 	//User Option States
 	public static final int BORROW = 50;
 	public static final int RENEW = 51;
+	public static final int RETURN = 52;
 	
 	SOutHandler southandler = new SOutHandler();
 	
@@ -233,6 +234,11 @@ public class SInHandler {
 		            	state=RENEW;
 		            	oo.setOutput(output);
 			            oo.setState(state);
+	        	 	}else if (input.equalsIgnoreCase("return")) {
+			            output = "Please Input Item Info:'useremail,ISBN,copynumber'";
+			            state=RETURN;
+			            oo.setOutput(output);
+			            oo.setState(state);
 	        	 	}else if(input.equalsIgnoreCase("log out")){
 		            	output = "Successfully Log Out!";
 		                state = WAIT;
@@ -280,6 +286,24 @@ public class SInHandler {
 			            oo.setState(state);
 		        	}else{
 		        		o=southandler.renew(input);
+		        		output=o.getOutput();
+		        		state=o.getState();
+		        		oo.setOutput(output);
+			            oo.setState(state);
+		        	}
+	         }else if(state==RETURN){
+		        	if(input.equalsIgnoreCase("log out")){
+		            	output = "Successfully Log Out!";
+		                state = WAIT;
+		                oo.setOutput(output);
+			            oo.setState(state);
+		        	}else if(input.equalsIgnoreCase("main menu")){
+		        		output = "What can I do for you?Menu:Borrow,Renew,Return,Pay Fine.";
+		                state = USER;
+		                oo.setOutput(output);
+			            oo.setState(state);
+		        	}else{
+		        		o=southandler.returnBook(input);
 		        		output=o.getOutput();
 		        		state=o.getState();
 		        		oo.setOutput(output);
