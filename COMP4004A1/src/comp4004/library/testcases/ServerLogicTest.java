@@ -44,7 +44,6 @@ public class ServerLogicTest {
 			if (temp.get(i).getUsername() == "eric@carleton.ca" && temp.get(i).getPassword() == "hello") {
 				count++;
 			} 
-			System.out.println(temp.get(i).getUsername() + " " + temp.get(i).getPassword());
 		} 
 		if (count != 1) {
 			fail("user not added to list");
@@ -59,6 +58,42 @@ public class ServerLogicTest {
 		}
 		if (count>1) {
 			fail("user added to list regardless");
+		}
+	}
+	
+	@Test
+	public void CreateTitleTest() {
+		Object result="";
+		
+		//unique isbn
+		result= TitleTable.getInstance().createtitle("9999999999999", "Test Book Vol.1");
+		assertTrue(result.equals(true));
+		
+		//username already exists 
+		result = TitleTable.getInstance().createtitle("9781442616899", "Dante's lyric poetry");
+		assertTrue(result.equals(false));
+		
+		List<Title> temp = TitleTable.getInstance().getTitleTable();
+		//check new addition
+		int count = 0;
+		for (int i=0; i<temp.size(); i++) {
+			if (temp.get(i).getISBN() == "9999999999999" && temp.get(i).getBooktitle() == "Test Book Vol.1") {
+				count++;
+			} 
+		} 
+		if (count != 1) {
+			fail("book not added to list");
+		}
+		
+		//check duplicate
+		count = 0;
+		for (int i=0; i<temp.size()-1; i++) {
+			if (temp.get(i).getISBN() == "9781442616899" && temp.get(i).getBooktitle() == "Dante's lyric poetry") {
+				count++;
+			}
+		}
+		if (count>1) {
+			fail("book added to list regardless");
 		}
 	}
 }
