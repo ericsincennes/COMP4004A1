@@ -19,6 +19,7 @@ public class SOutHandler {
 	public static final int CREATEITEM = 22;
 	//Deletion States
 	public static final int DELETEUSER = 30;
+	public static final int DELETETITLE = 31;
 	
 	
 	public SOutput clerkLogin(String input) {
@@ -112,6 +113,27 @@ public class SOutHandler {
         	output.setState(DELETEUSER);
         }else{
         	result=UserTable.getInstance().delete(userid);
+        	if(result.equals("success")){
+        		output.setOutput("Success!");
+        	}else{
+        		output.setOutput(result+"!");
+        	}
+        	output.setState(CLERK);
+        }
+		return output;
+	}
+	
+	public SOutput deleteTitle(String input) {
+		SOutput output=new SOutput("",0);
+		String[] strArray = null;   
+        strArray = input.split(",");
+        boolean number=isInteger(strArray[0]);
+        Object result="";
+        if(strArray.length!=1 || number!=true){
+        	output.setOutput("Your input should in this format:'ISBN',ISBN should be a 13-digit number");
+        	output.setState(DELETETITLE);
+        }else{
+        	result=TitleTable.getInstance().delete(strArray[0]);
         	if(result.equals("success")){
         		output.setOutput("Success!");
         	}else{

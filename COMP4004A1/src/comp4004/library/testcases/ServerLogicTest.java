@@ -146,4 +146,43 @@ public class ServerLogicTest {
 		result = UserTable.getInstance().delete(id);
 		assertFalse(result.equals("success"));
 	}
+	
+	@Test
+	public void DeleteTitleTest() {
+		List<Title> temp = TitleTable.getInstance().getTitleTable();
+		//delete existing title
+		result = TitleTable.getInstance().delete("9781442616899");
+		assertTrue(result.equals("success"));
+		
+		//delete title that is on loan
+		result= TitleTable.getInstance().delete("9781442668584");
+		assertTrue(result.equals("Active Loan Exists"));
+		
+		//delete title that doesnt exist
+		result = TitleTable.getInstance().delete("1112223334444");
+		assertTrue(result.equals("The Title Does Not Exist"));
+		
+		
+		//check deletion
+		int count = 0;
+		for (int i=0; i<temp.size(); i++) {
+			if (temp.get(i).getISBN() == "9781442616899") {
+				count++;
+			} 
+		} 
+		if (count != 0) {
+			fail("book not deleted");
+		}
+		
+		//check non-deletion of loaned book
+		count = 0;
+		for (int i=0; i<temp.size()-1; i++) {
+			if (temp.get(i).getISBN() == "9781442668584") {
+				count++;
+			}
+		}
+		if (count != 1) {
+			fail("book deleted regardless");
+		}
+	}
 }
