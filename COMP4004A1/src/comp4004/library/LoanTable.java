@@ -27,6 +27,9 @@ public class LoanTable {
     	//set up the default list with some instances
     	Loan loan=new Loan(0,"9781442668584","1",new Date(),"0");
     	loanList.add(loan);
+    	//testloan
+    	loan=new Loan(2,"9441442668584","1",new Date(),"0");
+    	loanList.add(loan);
     	logger.info(String.format("Operation:Initialize LoanTable;LoanTable: %s", loanList));
     };
     public static final LoanTable getInstance() {

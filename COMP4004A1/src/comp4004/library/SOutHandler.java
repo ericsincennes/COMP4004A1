@@ -18,6 +18,7 @@ public class SOutHandler {
 	//Clerk States
 	public static final int CLERK = 10;
 	public static final int CLERKLOGIN = 11;
+	public static final int MONITOR = 12;
 	//Creation States
 	public static final int CREATEUSER = 20;
 	public static final int CREATETITLE = 21;
@@ -181,6 +182,25 @@ public class SOutHandler {
             	output.setState(CLERK);
         	}
         }
+		return output;
+	}
+	
+	public SOutput monitor() {
+		SOutput output = new SOutput("",0);
+		String temp = "";
+		//Add users
+		temp+="Users:\n\n";
+		for (int i=0; i<UserTable.getInstance().getUserTable().size(); i++) {
+			temp+= UserTable.getInstance().getUserTable().get(i).getUsername() + "\n"; 
+		}
+		
+		//Add Books
+		temp+="\nBooks\n\n";
+		for (int j=0; j<TitleTable.getInstance().getTitleTable().size(); j++) {
+			temp+=TitleTable.getInstance().getTitleTable().get(j).getBooktitle()+" - "+TitleTable.getInstance().getTitleTable().get(j).getISBN()+"\n";
+		}
+		output.setOutput(temp);
+		output.setState(CLERK);
 		return output;
 	}
 	

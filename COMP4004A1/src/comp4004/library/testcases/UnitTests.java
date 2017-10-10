@@ -21,14 +21,14 @@ public class UnitTests {
 	@Test
 	public void ClerkLoginTest() {
 		//correct password and state
-		so = sinhandler.processInput("admin", 11);
-		assertTrue(so.getState() == 10);
+		so = sinhandler.processInput("admin", SInHandler.CLERKLOGIN);
+		assertTrue(so.getState() == SInHandler.CLERK);
 		//incorrect password - correct state
-		so = sinhandler.processInput("password", 11);
-		assertFalse(so.getState() == 10);
+		so = sinhandler.processInput("password", SInHandler.CLERKLOGIN);
+		assertFalse(so.getState() == SInHandler.CLERK);
 		//correct password - incorrect state
-		so = sinhandler.processInput("admin", 10);
-		assertFalse(so.getState() == 20);
+		so = sinhandler.processInput("admin", SInHandler.CLERK);
+		assertFalse(so.getState() == SInHandler.CLERKLOGIN);
 	}
 	
 	@Test
@@ -227,14 +227,14 @@ public class UnitTests {
 	@Test
 	public void UserLoginTest() {
 		//correct username/password and state
-		so = sinhandler.processInput("Zhibo@carleton.ca,Zhibo", 41);
-		assertTrue(so.getState() == 40);
+		so = sinhandler.processInput("Zhibo@carleton.ca,Zhibo", SInHandler.USERLOGIN);
+		assertTrue(so.getState() == SInHandler.USER);
 		//incorrect username/password - correct state
-		so = sinhandler.processInput("Yu@carleton.ca,password", 41);
-		assertFalse(so.getState() == 40);
+		so = sinhandler.processInput("Yu@carleton.ca,password", SInHandler.USERLOGIN);
+		assertFalse(so.getState() == SInHandler.USER);
 		//correct username/password - incorrect state
-		so = sinhandler.processInput("Yu@carleton.ca,Yu", 11);
-		assertFalse(so.getState() == 40);
+		so = sinhandler.processInput("Yu@carleton.ca,Yu", SInHandler.CLERKLOGIN);
+		assertFalse(so.getState() == SInHandler.USER);
 	}
 	
 	@Test
