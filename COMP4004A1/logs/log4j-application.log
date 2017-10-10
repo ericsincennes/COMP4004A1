@@ -1417,4 +1417,505 @@
 @2017-10-10 16:28:26 INFO  String:91 - Operation:Delete Title;ISBN Info:[9441442668584];State:Fail;Reason:Active Loan Exists.
 @2017-10-10 16:28:26 INFO  String:44 - Operation:Create New Title;Title Info:[9876543213210,New Test Book];State:Success
 @2017-10-10 16:28:26 INFO  String:47 - Operation:Create New Title;Title Info:[9876543213210,New Test Book Vol.2];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 16:51:36 INFO  String:29 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2017-10-10 16:51:36 INFO  String:26 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context], [9781236565459,My First Book], [9441442668584,My First Loan]]
+@2017-10-10 16:51:36 INFO  String:44 - Operation:Create New Title;Title Info:[9996543213210,ItemBook Vol.1];State:Success
+@2017-10-10 16:51:36 INFO  String:26 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1], [4,9781317594277,1], [5,9781236565459,1], [6,9441442668584,1]]
+@2017-10-10 16:51:36 INFO  String:47 - Operation:Create New Item;Item Info:[9996543213210,1];State:Success
+@2017-10-10 16:51:36 INFO  String:50 - Operation:Create New Item;Item Info:[9886543213210,N/A];State:Fail;Reason:No such ISBN existed.
+@2017-10-10 16:51:36 INFO  String:49 - Operation:Create New User;User Info:[newguy@carleton.ca,newpass];State:Success
+@2017-10-10 16:51:36 INFO  String:52 - Operation:Create New User;User Info:[newguy@carleton.ca,newpasstwo];State:Fail;Reason:The User already existed.
+@2017-10-10 16:51:36 INFO  String:44 - Operation:Create New Title;Title Info:[9777743213210,DelItem Vol.1];State:Success
+@2017-10-10 16:51:36 INFO  String:47 - Operation:Create New Item;Item Info:[9777743213210,1];State:Success
+@2017-10-10 16:51:36 INFO  String:33 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2017-10-10 04:51:36,0], [2,9441442668584,1,2017-10-10 04:51:36,0]]
+@2017-10-10 16:51:36 INFO  String:85 - Operation:Delete Item;Item Info:[9777743213210,N/A];State:Success
+@2017-10-10 16:51:36 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,5];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 16:51:36 INFO  String:88 - Operation:Delete Item;Item Info:[9441442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 16:51:36 INFO  String:49 - Operation:Create New User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 16:51:36 INFO  String:103 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2017-10-10 16:51:36 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5]]
+@2017-10-10 16:51:36 INFO  String:113 - Operation:Apply OutStanding Fee;Fee Info:[2,0];State:Success
+@2017-10-10 16:51:36 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [2,0]]
+@2017-10-10 16:51:36 INFO  String:93 - Operation:Delete User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 16:51:36 INFO  String:99 - Operation:Delete User;User Info:[Michelle@carleton.ca,Michelle];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 16:51:36 INFO  String:96 - Operation:Delete User;User Info:[Kevin@carleton.ca,Kevin];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 16:51:36 INFO  String:44 - Operation:Create New Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 16:51:36 INFO  String:88 - Operation:Delete Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 16:51:36 INFO  String:95 - Operation:Delete Title;ISBN Info:[9876543210000];State:Fail;Reason:The Title Does Not Exist.
+@2017-10-10 16:51:36 INFO  String:91 - Operation:Delete Title;ISBN Info:[9441442668584];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 16:51:36 INFO  String:44 - Operation:Create New Title;Title Info:[9876543213210,New Test Book];State:Success
+@2017-10-10 16:51:36 INFO  String:47 - Operation:Create New Title;Title Info:[9876543213210,New Test Book Vol.2];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 17:40:27 INFO  String:29 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2017-10-10 17:40:27 INFO  String:49 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Success
+@2017-10-10 17:40:27 INFO  String:26 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context], [9781236565459,My First Book], [9441442668584,My First Loan]]
+@2017-10-10 17:40:27 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:40:27 INFO  String:44 - Operation:Create New Title;Title Info:[9996543213210,ItemBook Vol.1];State:Success
+@2017-10-10 17:40:27 INFO  String:26 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1], [4,9781317594277,1], [5,9781236565459,1], [6,9441442668584,1]]
+@2017-10-10 17:40:27 INFO  String:47 - Operation:Create New Item;Item Info:[9996543213210,1];State:Success
+@2017-10-10 17:40:27 INFO  String:50 - Operation:Create New Item;Item Info:[9886543213210,N/A];State:Fail;Reason:No such ISBN existed.
+@2017-10-10 17:40:27 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:40:27 INFO  String:49 - Operation:Create New User;User Info:[newguy@carleton.ca,newpass];State:Success
+@2017-10-10 17:40:27 INFO  String:52 - Operation:Create New User;User Info:[newguy@carleton.ca,newpasstwo];State:Fail;Reason:The User already existed.
+@2017-10-10 17:40:27 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:40:27 INFO  String:44 - Operation:Create New Title;Title Info:[9777743213210,DelItem Vol.1];State:Success
+@2017-10-10 17:40:27 INFO  String:47 - Operation:Create New Item;Item Info:[9777743213210,1];State:Success
+@2017-10-10 17:40:27 INFO  String:33 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2017-10-10 05:40:27,0], [2,9441442668584,1,2017-10-10 05:40:27,0]]
+@2017-10-10 17:40:27 INFO  String:85 - Operation:Delete Item;Item Info:[9777743213210,N/A];State:Success
+@2017-10-10 17:40:27 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,5];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 17:40:27 INFO  String:88 - Operation:Delete Item;Item Info:[9441442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 17:40:27 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:40:27 INFO  String:49 - Operation:Create New User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 17:40:27 INFO  String:103 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2017-10-10 17:40:27 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5]]
+@2017-10-10 17:40:27 INFO  String:113 - Operation:Apply OutStanding Fee;Fee Info:[2,0];State:Success
+@2017-10-10 17:40:27 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [2,0]]
+@2017-10-10 17:40:27 INFO  String:93 - Operation:Delete User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 17:40:27 INFO  String:99 - Operation:Delete User;User Info:[Michelle@carleton.ca,Michelle];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 17:40:27 INFO  String:96 - Operation:Delete User;User Info:[Kevin@carleton.ca,Kevin];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 17:40:27 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:40:27 INFO  String:44 - Operation:Create New Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 17:40:27 INFO  String:88 - Operation:Delete Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 17:40:27 INFO  String:95 - Operation:Delete Title;ISBN Info:[9876543210000];State:Fail;Reason:The Title Does Not Exist.
+@2017-10-10 17:40:27 INFO  String:91 - Operation:Delete Title;ISBN Info:[9441442668584];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 17:40:27 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:40:27 INFO  String:44 - Operation:Create New Title;Title Info:[9876543213210,New Test Book];State:Success
+@2017-10-10 17:40:27 INFO  String:47 - Operation:Create New Title;Title Info:[9876543213210,New Test Book Vol.2];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 17:40:27 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:40:27 INFO  String:47 - Operation:Create New Title;Title Info:[9777743213210,DelItem Vol.1];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 17:40:27 INFO  String:47 - Operation:Create New Item;Item Info:[9777743213210,2];State:Success
+@2017-10-10 17:40:27 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,1];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 17:40:27 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,5];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 17:40:27 INFO  String:88 - Operation:Delete Item;Item Info:[9441442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 17:56:59 INFO  String:29 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2017-10-10 17:56:59 INFO  String:49 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Success
+@2017-10-10 17:56:59 INFO  String:26 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context], [9781236565459,My First Book], [9441442668584,My First Loan]]
+@2017-10-10 17:56:59 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:56:59 INFO  String:44 - Operation:Create New Title;Title Info:[9996543213210,ItemBook Vol.1];State:Success
+@2017-10-10 17:56:59 INFO  String:26 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1], [4,9781317594277,1], [5,9781236565459,1], [6,9441442668584,1]]
+@2017-10-10 17:56:59 INFO  String:47 - Operation:Create New Item;Item Info:[9996543213210,1];State:Success
+@2017-10-10 17:56:59 INFO  String:50 - Operation:Create New Item;Item Info:[9886543213210,N/A];State:Fail;Reason:No such ISBN existed.
+@2017-10-10 17:56:59 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:56:59 INFO  String:49 - Operation:Create New User;User Info:[newguy@carleton.ca,newpass];State:Success
+@2017-10-10 17:56:59 INFO  String:52 - Operation:Create New User;User Info:[newguy@carleton.ca,newpasstwo];State:Fail;Reason:The User already existed.
+@2017-10-10 17:56:59 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:56:59 INFO  String:44 - Operation:Create New Title;Title Info:[9777743213210,DelItem Vol.1];State:Success
+@2017-10-10 17:56:59 INFO  String:47 - Operation:Create New Item;Item Info:[9777743213210,1];State:Success
+@2017-10-10 17:56:59 INFO  String:33 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2017-10-10 05:56:59,0], [2,9441442668584,1,2017-10-10 05:56:59,0]]
+@2017-10-10 17:56:59 INFO  String:85 - Operation:Delete Item;Item Info:[9777743213210,N/A];State:Success
+@2017-10-10 17:56:59 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,5];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 17:56:59 INFO  String:88 - Operation:Delete Item;Item Info:[9441442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 17:56:59 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:56:59 INFO  String:49 - Operation:Create New User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 17:56:59 INFO  String:103 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2017-10-10 17:56:59 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5]]
+@2017-10-10 17:56:59 INFO  String:113 - Operation:Apply OutStanding Fee;Fee Info:[2,0];State:Success
+@2017-10-10 17:56:59 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [2,0]]
+@2017-10-10 17:56:59 INFO  String:93 - Operation:Delete User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 17:56:59 INFO  String:99 - Operation:Delete User;User Info:[Michelle@carleton.ca,Michelle];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 17:56:59 INFO  String:96 - Operation:Delete User;User Info:[Kevin@carleton.ca,Kevin];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 17:56:59 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:56:59 INFO  String:44 - Operation:Create New Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 17:56:59 INFO  String:88 - Operation:Delete Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 17:56:59 INFO  String:95 - Operation:Delete Title;ISBN Info:[9876543210000];State:Fail;Reason:The Title Does Not Exist.
+@2017-10-10 17:56:59 INFO  String:91 - Operation:Delete Title;ISBN Info:[9441442668584];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 17:56:59 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:56:59 INFO  String:44 - Operation:Create New Title;Title Info:[9876543213210,New Test Book];State:Success
+@2017-10-10 17:56:59 INFO  String:47 - Operation:Create New Title;Title Info:[9876543213210,New Test Book Vol.2];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 17:56:59 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 17:56:59 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781236565459,1,2017-10-10 05:56:59];State:Success
+@2017-10-10 17:56:59 INFO  String:72 - Operation:Borrow Item;Loan Info:[5,9441442668584,1,2017-10-10 05:56:59];State:Fail;Reason:The Item is Not Available.
+@2017-10-10 17:56:59 INFO  String:68 - Operation:Borrow Item;Loan Info:[0,9781442616899,1,2017-10-10 05:56:59];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:30:49 INFO  String:29 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2017-10-10 18:30:49 INFO  String:49 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Success
+@2017-10-10 18:30:49 INFO  String:33 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2017-10-10 06:30:49,0], [2,9441442668584,1,2017-10-10 06:30:49,0]]
+@2017-10-10 18:30:49 INFO  String:26 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context], [9781236565459,My First Book], [9441442668584,My First Loan]]
+@2017-10-10 18:30:49 INFO  String:26 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1], [4,9781317594277,1], [5,9781236565459,1], [6,9441442668584,1]]
+@2017-10-10 18:30:49 INFO  String:103 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2017-10-10 18:30:49 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5]]
+@2017-10-10 18:30:49 INFO  String:113 - Operation:Apply OutStanding Fee;Fee Info:[2,0];State:Success
+@2017-10-10 18:30:49 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [2,0]]
+@2017-10-10 18:30:49 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781317594277,1,2017-10-10 06:30:49];State:Success
+@2017-10-10 18:30:49 INFO  String:142 - Operation:Return Item;Loan Info:[5,9781317594277,1,2017-10-10 06:30:49];State:Success
+@2017-10-10 18:30:49 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:30:49 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:30:49 INFO  String:44 - Operation:Create New Title;Title Info:[9996543213210,ItemBook Vol.1];State:Success
+@2017-10-10 18:30:49 INFO  String:47 - Operation:Create New Item;Item Info:[9996543213210,1];State:Success
+@2017-10-10 18:30:49 INFO  String:50 - Operation:Create New Item;Item Info:[9886543213210,N/A];State:Fail;Reason:No such ISBN existed.
+@2017-10-10 18:30:49 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:30:49 INFO  String:49 - Operation:Create New User;User Info:[newguy@carleton.ca,newpass];State:Success
+@2017-10-10 18:30:49 INFO  String:52 - Operation:Create New User;User Info:[newguy@carleton.ca,newpasstwo];State:Fail;Reason:The User already existed.
+@2017-10-10 18:30:49 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:30:49 INFO  String:44 - Operation:Create New Title;Title Info:[9777743213210,DelItem Vol.1];State:Success
+@2017-10-10 18:30:49 INFO  String:47 - Operation:Create New Item;Item Info:[9777743213210,1];State:Success
+@2017-10-10 18:30:49 INFO  String:85 - Operation:Delete Item;Item Info:[9777743213210,N/A];State:Success
+@2017-10-10 18:30:49 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,5];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 18:30:49 INFO  String:88 - Operation:Delete Item;Item Info:[9441442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 18:30:49 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:30:49 INFO  String:49 - Operation:Create New User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:30:49 INFO  String:93 - Operation:Delete User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:30:49 INFO  String:99 - Operation:Delete User;User Info:[Michelle@carleton.ca,Michelle];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:30:49 INFO  String:96 - Operation:Delete User;User Info:[Kevin@carleton.ca,Kevin];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:30:49 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:30:49 INFO  String:44 - Operation:Create New Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:30:49 INFO  String:88 - Operation:Delete Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:30:49 INFO  String:95 - Operation:Delete Title;ISBN Info:[9876543210000];State:Fail;Reason:The Title Does Not Exist.
+@2017-10-10 18:30:49 INFO  String:91 - Operation:Delete Title;ISBN Info:[9441442668584];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:30:49 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:30:49 INFO  String:44 - Operation:Create New Title;Title Info:[9876543213210,New Test Book];State:Success
+@2017-10-10 18:30:49 INFO  String:47 - Operation:Create New Title;Title Info:[9876543213210,New Test Book Vol.2];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 18:30:49 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:30:49 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781236565459,1,2017-10-10 06:30:49];State:Success
+@2017-10-10 18:31:10 INFO  String:29 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2017-10-10 18:31:10 INFO  String:49 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Success
+@2017-10-10 18:31:10 INFO  String:33 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2017-10-10 06:31:10,0], [2,9441442668584,1,2017-10-10 06:31:10,0]]
+@2017-10-10 18:31:10 INFO  String:26 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context], [9781236565459,My First Book], [9441442668584,My First Loan]]
+@2017-10-10 18:31:10 INFO  String:26 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1], [4,9781317594277,1], [5,9781236565459,1], [6,9441442668584,1]]
+@2017-10-10 18:31:10 INFO  String:103 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2017-10-10 18:31:10 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5]]
+@2017-10-10 18:31:10 INFO  String:113 - Operation:Apply OutStanding Fee;Fee Info:[2,0];State:Success
+@2017-10-10 18:31:10 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [2,0]]
+@2017-10-10 18:31:10 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781317594277,1,2017-10-10 06:31:10];State:Success
+@2017-10-10 18:31:10 INFO  String:142 - Operation:Return Item;Loan Info:[5,9781317594277,1,2017-10-10 06:31:10];State:Success
+@2017-10-10 18:31:10 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:31:10 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:31:10 INFO  String:44 - Operation:Create New Title;Title Info:[9996543213210,ItemBook Vol.1];State:Success
+@2017-10-10 18:31:10 INFO  String:47 - Operation:Create New Item;Item Info:[9996543213210,1];State:Success
+@2017-10-10 18:31:10 INFO  String:50 - Operation:Create New Item;Item Info:[9886543213210,N/A];State:Fail;Reason:No such ISBN existed.
+@2017-10-10 18:31:10 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:31:10 INFO  String:49 - Operation:Create New User;User Info:[newguy@carleton.ca,newpass];State:Success
+@2017-10-10 18:31:10 INFO  String:52 - Operation:Create New User;User Info:[newguy@carleton.ca,newpasstwo];State:Fail;Reason:The User already existed.
+@2017-10-10 18:31:10 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:31:10 INFO  String:44 - Operation:Create New Title;Title Info:[9777743213210,DelItem Vol.1];State:Success
+@2017-10-10 18:31:10 INFO  String:47 - Operation:Create New Item;Item Info:[9777743213210,1];State:Success
+@2017-10-10 18:31:10 INFO  String:85 - Operation:Delete Item;Item Info:[9777743213210,N/A];State:Success
+@2017-10-10 18:31:10 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,5];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 18:31:10 INFO  String:88 - Operation:Delete Item;Item Info:[9441442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 18:31:10 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:31:10 INFO  String:49 - Operation:Create New User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:31:10 INFO  String:93 - Operation:Delete User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:31:10 INFO  String:99 - Operation:Delete User;User Info:[Michelle@carleton.ca,Michelle];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:31:10 INFO  String:96 - Operation:Delete User;User Info:[Kevin@carleton.ca,Kevin];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:31:10 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:31:10 INFO  String:44 - Operation:Create New Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:31:10 INFO  String:88 - Operation:Delete Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:31:10 INFO  String:95 - Operation:Delete Title;ISBN Info:[9876543210000];State:Fail;Reason:The Title Does Not Exist.
+@2017-10-10 18:31:10 INFO  String:91 - Operation:Delete Title;ISBN Info:[9441442668584];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:31:10 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:31:10 INFO  String:44 - Operation:Create New Title;Title Info:[9876543213210,New Test Book];State:Success
+@2017-10-10 18:31:10 INFO  String:47 - Operation:Create New Title;Title Info:[9876543213210,New Test Book Vol.2];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 18:31:10 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:31:10 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781236565459,1,2017-10-10 06:31:10];State:Success
+@2017-10-10 18:31:10 INFO  String:72 - Operation:Borrow Item;Loan Info:[5,9441442668584,1,2017-10-10 06:31:10];State:Fail;Reason:The Item is Not Available.
+@2017-10-10 18:31:10 INFO  String:68 - Operation:Borrow Item;Loan Info:[0,9781442616899,1,2017-10-10 06:31:10];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:32:16 INFO  String:29 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2017-10-10 18:32:16 INFO  String:49 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Success
+@2017-10-10 18:32:16 INFO  String:33 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2017-10-10 06:32:16,0], [2,9441442668584,1,2017-10-10 06:32:16,0]]
+@2017-10-10 18:32:16 INFO  String:26 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context], [9781236565459,My First Book], [9441442668584,My First Loan]]
+@2017-10-10 18:32:16 INFO  String:26 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1], [4,9781317594277,1], [5,9781236565459,1], [6,9441442668584,1]]
+@2017-10-10 18:32:16 INFO  String:103 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2017-10-10 18:32:16 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5]]
+@2017-10-10 18:32:16 INFO  String:113 - Operation:Apply OutStanding Fee;Fee Info:[2,0];State:Success
+@2017-10-10 18:32:16 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [2,0]]
+@2017-10-10 18:32:16 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781317594277,1,2017-10-10 06:32:16];State:Success
+@2017-10-10 18:32:16 INFO  String:142 - Operation:Return Item;Loan Info:[5,9781317594277,1,2017-10-10 06:32:16];State:Success
+@2017-10-10 18:32:16 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:32:16 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:32:16 INFO  String:44 - Operation:Create New Title;Title Info:[9996543213210,ItemBook Vol.1];State:Success
+@2017-10-10 18:32:16 INFO  String:47 - Operation:Create New Item;Item Info:[9996543213210,1];State:Success
+@2017-10-10 18:32:16 INFO  String:50 - Operation:Create New Item;Item Info:[9886543213210,N/A];State:Fail;Reason:No such ISBN existed.
+@2017-10-10 18:32:16 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:32:16 INFO  String:49 - Operation:Create New User;User Info:[newguy@carleton.ca,newpass];State:Success
+@2017-10-10 18:32:16 INFO  String:52 - Operation:Create New User;User Info:[newguy@carleton.ca,newpasstwo];State:Fail;Reason:The User already existed.
+@2017-10-10 18:32:16 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:32:16 INFO  String:44 - Operation:Create New Title;Title Info:[9777743213210,DelItem Vol.1];State:Success
+@2017-10-10 18:32:16 INFO  String:47 - Operation:Create New Item;Item Info:[9777743213210,1];State:Success
+@2017-10-10 18:32:16 INFO  String:85 - Operation:Delete Item;Item Info:[9777743213210,N/A];State:Success
+@2017-10-10 18:32:16 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,5];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 18:32:16 INFO  String:88 - Operation:Delete Item;Item Info:[9441442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 18:32:16 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:32:16 INFO  String:49 - Operation:Create New User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:32:16 INFO  String:93 - Operation:Delete User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:32:16 INFO  String:99 - Operation:Delete User;User Info:[Michelle@carleton.ca,Michelle];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:32:16 INFO  String:96 - Operation:Delete User;User Info:[Kevin@carleton.ca,Kevin];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:32:16 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:32:16 INFO  String:44 - Operation:Create New Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:32:16 INFO  String:88 - Operation:Delete Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:32:16 INFO  String:95 - Operation:Delete Title;ISBN Info:[9876543210000];State:Fail;Reason:The Title Does Not Exist.
+@2017-10-10 18:32:16 INFO  String:91 - Operation:Delete Title;ISBN Info:[9441442668584];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:32:16 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:32:16 INFO  String:44 - Operation:Create New Title;Title Info:[9876543213210,New Test Book];State:Success
+@2017-10-10 18:32:16 INFO  String:47 - Operation:Create New Title;Title Info:[9876543213210,New Test Book Vol.2];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 18:32:16 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:32:16 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781236565459,1,2017-10-10 06:32:16];State:Success
+@2017-10-10 18:35:23 INFO  String:29 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2017-10-10 18:35:23 INFO  String:49 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Success
+@2017-10-10 18:35:23 INFO  String:33 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2017-10-10 06:35:23,0], [2,9441442668584,1,2017-10-10 06:35:23,0]]
+@2017-10-10 18:35:23 INFO  String:26 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context], [9781236565459,My First Book], [9441442668584,My First Loan]]
+@2017-10-10 18:35:23 INFO  String:26 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1], [4,9781317594277,1], [5,9781236565459,1], [6,9441442668584,1]]
+@2017-10-10 18:35:23 INFO  String:103 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2017-10-10 18:35:23 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5]]
+@2017-10-10 18:35:23 INFO  String:113 - Operation:Apply OutStanding Fee;Fee Info:[2,0];State:Success
+@2017-10-10 18:35:23 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [2,0]]
+@2017-10-10 18:35:23 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781317594277,1,2017-10-10 06:35:23];State:Success
+@2017-10-10 18:35:23 INFO  String:142 - Operation:Return Item;Loan Info:[5,9781317594277,1,2017-10-10 06:35:23];State:Success
+@2017-10-10 18:35:23 INFO  String:72 - Operation:Borrow Item;Loan Info:[5,9441442668584,1,2017-10-10 06:35:23];State:Fail;Reason:The Item is Not Available.
+@2017-10-10 18:35:23 INFO  String:68 - Operation:Borrow Item;Loan Info:[0,9781442616899,1,2017-10-10 06:35:23];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:35:23 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:35:23 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:35:23 INFO  String:44 - Operation:Create New Title;Title Info:[9996543213210,ItemBook Vol.1];State:Success
+@2017-10-10 18:35:23 INFO  String:47 - Operation:Create New Item;Item Info:[9996543213210,1];State:Success
+@2017-10-10 18:35:23 INFO  String:50 - Operation:Create New Item;Item Info:[9886543213210,N/A];State:Fail;Reason:No such ISBN existed.
+@2017-10-10 18:35:23 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:35:23 INFO  String:49 - Operation:Create New User;User Info:[newguy@carleton.ca,newpass];State:Success
+@2017-10-10 18:35:23 INFO  String:52 - Operation:Create New User;User Info:[newguy@carleton.ca,newpasstwo];State:Fail;Reason:The User already existed.
+@2017-10-10 18:35:23 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:35:23 INFO  String:44 - Operation:Create New Title;Title Info:[9777743213210,DelItem Vol.1];State:Success
+@2017-10-10 18:35:23 INFO  String:47 - Operation:Create New Item;Item Info:[9777743213210,1];State:Success
+@2017-10-10 18:35:23 INFO  String:85 - Operation:Delete Item;Item Info:[9777743213210,N/A];State:Success
+@2017-10-10 18:35:23 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,5];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 18:35:23 INFO  String:88 - Operation:Delete Item;Item Info:[9441442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 18:35:23 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:35:23 INFO  String:49 - Operation:Create New User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:35:23 INFO  String:93 - Operation:Delete User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:35:23 INFO  String:99 - Operation:Delete User;User Info:[Michelle@carleton.ca,Michelle];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:35:23 INFO  String:96 - Operation:Delete User;User Info:[Kevin@carleton.ca,Kevin];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:35:23 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:35:23 INFO  String:44 - Operation:Create New Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:35:23 INFO  String:88 - Operation:Delete Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:35:23 INFO  String:95 - Operation:Delete Title;ISBN Info:[9876543210000];State:Fail;Reason:The Title Does Not Exist.
+@2017-10-10 18:35:23 INFO  String:91 - Operation:Delete Title;ISBN Info:[9441442668584];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:35:23 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:35:23 INFO  String:44 - Operation:Create New Title;Title Info:[9876543213210,New Test Book];State:Success
+@2017-10-10 18:35:23 INFO  String:47 - Operation:Create New Title;Title Info:[9876543213210,New Test Book Vol.2];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 18:35:23 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:35:23 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781236565459,1,2017-10-10 06:35:23];State:Success
+@2017-10-10 18:35:23 INFO  String:72 - Operation:Borrow Item;Loan Info:[5,9441442668584,1,2017-10-10 06:35:23];State:Fail;Reason:The Item is Not Available.
+@2017-10-10 18:35:23 INFO  String:68 - Operation:Borrow Item;Loan Info:[0,9781442616899,1,2017-10-10 06:35:23];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:37:56 INFO  String:29 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2017-10-10 18:37:56 INFO  String:49 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Success
+@2017-10-10 18:37:56 INFO  String:33 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2017-10-10 06:37:56,0], [2,9441442668584,1,2017-10-10 06:37:56,0]]
+@2017-10-10 18:37:56 INFO  String:26 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context], [9781236565459,My First Book], [9441442668584,My First Loan]]
+@2017-10-10 18:37:56 INFO  String:26 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1], [4,9781317594277,1], [5,9781236565459,1], [6,9441442668584,1]]
+@2017-10-10 18:37:56 INFO  String:103 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2017-10-10 18:37:56 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5]]
+@2017-10-10 18:37:56 INFO  String:113 - Operation:Apply OutStanding Fee;Fee Info:[2,0];State:Success
+@2017-10-10 18:37:56 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [2,0]]
+@2017-10-10 18:37:56 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781317594277,1,2017-10-10 06:37:56];State:Success
+@2017-10-10 18:37:56 INFO  String:142 - Operation:Return Item;Loan Info:[5,9781317594277,1,2017-10-10 06:37:56];State:Success
+@2017-10-10 18:37:56 INFO  String:149 - Operation:Return Item;Loan Info:[5,9781317594277,1,2017-10-10 06:37:56];State:Fail;Reason:The Loan Does Not Exist.
+@2017-10-10 18:37:56 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:37:56 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:37:56 INFO  String:44 - Operation:Create New Title;Title Info:[9996543213210,ItemBook Vol.1];State:Success
+@2017-10-10 18:37:56 INFO  String:47 - Operation:Create New Item;Item Info:[9996543213210,1];State:Success
+@2017-10-10 18:37:56 INFO  String:50 - Operation:Create New Item;Item Info:[9886543213210,N/A];State:Fail;Reason:No such ISBN existed.
+@2017-10-10 18:37:56 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:37:56 INFO  String:49 - Operation:Create New User;User Info:[newguy@carleton.ca,newpass];State:Success
+@2017-10-10 18:37:56 INFO  String:52 - Operation:Create New User;User Info:[newguy@carleton.ca,newpasstwo];State:Fail;Reason:The User already existed.
+@2017-10-10 18:37:56 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:37:56 INFO  String:44 - Operation:Create New Title;Title Info:[9777743213210,DelItem Vol.1];State:Success
+@2017-10-10 18:37:56 INFO  String:47 - Operation:Create New Item;Item Info:[9777743213210,1];State:Success
+@2017-10-10 18:37:56 INFO  String:85 - Operation:Delete Item;Item Info:[9777743213210,N/A];State:Success
+@2017-10-10 18:37:56 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,5];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 18:37:56 INFO  String:88 - Operation:Delete Item;Item Info:[9441442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 18:37:56 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:37:56 INFO  String:49 - Operation:Create New User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:37:56 INFO  String:93 - Operation:Delete User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:37:56 INFO  String:99 - Operation:Delete User;User Info:[Michelle@carleton.ca,Michelle];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:37:56 INFO  String:96 - Operation:Delete User;User Info:[Kevin@carleton.ca,Kevin];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:37:56 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:37:56 INFO  String:44 - Operation:Create New Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:37:56 INFO  String:88 - Operation:Delete Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:37:56 INFO  String:95 - Operation:Delete Title;ISBN Info:[9876543210000];State:Fail;Reason:The Title Does Not Exist.
+@2017-10-10 18:37:56 INFO  String:91 - Operation:Delete Title;ISBN Info:[9441442668584];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:37:56 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:37:56 INFO  String:44 - Operation:Create New Title;Title Info:[9876543213210,New Test Book];State:Success
+@2017-10-10 18:37:56 INFO  String:47 - Operation:Create New Title;Title Info:[9876543213210,New Test Book Vol.2];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 18:37:56 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:37:56 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781236565459,1,2017-10-10 06:37:56];State:Success
+@2017-10-10 18:37:56 INFO  String:72 - Operation:Borrow Item;Loan Info:[5,9441442668584,1,2017-10-10 06:37:56];State:Fail;Reason:The Item is Not Available.
+@2017-10-10 18:37:56 INFO  String:68 - Operation:Borrow Item;Loan Info:[0,9781442616899,1,2017-10-10 06:37:56];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:49:42 INFO  String:29 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2017-10-10 18:49:42 INFO  String:49 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Success
+@2017-10-10 18:49:42 INFO  String:33 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2017-10-10 06:49:42,0], [2,9441442668584,1,2017-10-10 06:49:42,0]]
+@2017-10-10 18:49:42 INFO  String:26 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context], [9781236565459,My First Book], [9441442668584,My First Loan]]
+@2017-10-10 18:49:42 INFO  String:26 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1], [4,9781317594277,1], [5,9781236565459,1], [6,9441442668584,1]]
+@2017-10-10 18:49:42 INFO  String:103 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2017-10-10 18:49:42 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5]]
+@2017-10-10 18:49:42 INFO  String:113 - Operation:Apply OutStanding Fee;Fee Info:[2,0];State:Success
+@2017-10-10 18:49:42 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [2,0]]
+@2017-10-10 18:49:42 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781317594277,1,2017-10-10 06:49:42];State:Success
+@2017-10-10 18:49:42 INFO  String:142 - Operation:Return Item;Loan Info:[5,9781317594277,1,2017-10-10 06:49:42];State:Success
+@2017-10-10 18:49:42 INFO  String:149 - Operation:Return Item;Loan Info:[5,9781317594277,1,2017-10-10 06:49:42];State:Fail;Reason:The Loan Does Not Exist.
+@2017-10-10 18:49:42 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:49:42 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:49:42 INFO  String:44 - Operation:Create New Title;Title Info:[9996543213210,ItemBook Vol.1];State:Success
+@2017-10-10 18:49:42 INFO  String:47 - Operation:Create New Item;Item Info:[9996543213210,1];State:Success
+@2017-10-10 18:49:42 INFO  String:50 - Operation:Create New Item;Item Info:[9886543213210,N/A];State:Fail;Reason:No such ISBN existed.
+@2017-10-10 18:49:42 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:49:42 INFO  String:49 - Operation:Create New User;User Info:[newguy@carleton.ca,newpass];State:Success
+@2017-10-10 18:49:42 INFO  String:52 - Operation:Create New User;User Info:[newguy@carleton.ca,newpasstwo];State:Fail;Reason:The User already existed.
+@2017-10-10 18:49:42 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:49:42 INFO  String:44 - Operation:Create New Title;Title Info:[9777743213210,DelItem Vol.1];State:Success
+@2017-10-10 18:49:42 INFO  String:47 - Operation:Create New Item;Item Info:[9777743213210,1];State:Success
+@2017-10-10 18:49:42 INFO  String:85 - Operation:Delete Item;Item Info:[9777743213210,N/A];State:Success
+@2017-10-10 18:49:42 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,5];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 18:49:42 INFO  String:88 - Operation:Delete Item;Item Info:[9441442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 18:49:42 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:49:42 INFO  String:49 - Operation:Create New User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:49:42 INFO  String:93 - Operation:Delete User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:49:42 INFO  String:99 - Operation:Delete User;User Info:[Michelle@carleton.ca,Michelle];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:49:42 INFO  String:96 - Operation:Delete User;User Info:[Kevin@carleton.ca,Kevin];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:49:42 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:49:42 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781317594277,1,2017-10-10 06:49:42];State:Success
+@2017-10-10 18:49:42 INFO  String:104 - Operation:Renew Item;Loan Info:[5,9781317594277,1,2017-10-10 06:49:42];State:Success
+@2017-10-10 18:49:42 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:49:42 INFO  String:44 - Operation:Create New Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:49:42 INFO  String:88 - Operation:Delete Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:49:42 INFO  String:95 - Operation:Delete Title;ISBN Info:[9876543210000];State:Fail;Reason:The Title Does Not Exist.
+@2017-10-10 18:49:42 INFO  String:91 - Operation:Delete Title;ISBN Info:[9441442668584];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:49:42 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:49:42 INFO  String:44 - Operation:Create New Title;Title Info:[9876543213210,New Test Book];State:Success
+@2017-10-10 18:49:42 INFO  String:47 - Operation:Create New Title;Title Info:[9876543213210,New Test Book Vol.2];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 18:49:42 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:49:42 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781236565459,1,2017-10-10 06:49:42];State:Success
+@2017-10-10 18:49:42 INFO  String:72 - Operation:Borrow Item;Loan Info:[5,9441442668584,1,2017-10-10 06:49:42];State:Fail;Reason:The Item is Not Available.
+@2017-10-10 18:49:42 INFO  String:68 - Operation:Borrow Item;Loan Info:[0,9781442616899,1,2017-10-10 06:49:42];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:50:01 INFO  String:29 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2017-10-10 18:50:01 INFO  String:49 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Success
+@2017-10-10 18:50:01 INFO  String:33 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2017-10-10 06:50:01,0], [2,9441442668584,1,2017-10-10 06:50:01,0]]
+@2017-10-10 18:50:01 INFO  String:26 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context], [9781236565459,My First Book], [9441442668584,My First Loan]]
+@2017-10-10 18:50:01 INFO  String:26 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1], [4,9781317594277,1], [5,9781236565459,1], [6,9441442668584,1]]
+@2017-10-10 18:50:01 INFO  String:103 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2017-10-10 18:50:01 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5]]
+@2017-10-10 18:50:01 INFO  String:113 - Operation:Apply OutStanding Fee;Fee Info:[2,0];State:Success
+@2017-10-10 18:50:01 INFO  String:155 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [2,0]]
+@2017-10-10 18:50:01 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781317594277,1,2017-10-10 06:50:01];State:Success
+@2017-10-10 18:50:01 INFO  String:142 - Operation:Return Item;Loan Info:[5,9781317594277,1,2017-10-10 06:50:01];State:Success
+@2017-10-10 18:50:01 INFO  String:149 - Operation:Return Item;Loan Info:[5,9781317594277,1,2017-10-10 06:50:01];State:Fail;Reason:The Loan Does Not Exist.
+@2017-10-10 18:50:01 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:50:01 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:50:01 INFO  String:44 - Operation:Create New Title;Title Info:[9996543213210,ItemBook Vol.1];State:Success
+@2017-10-10 18:50:01 INFO  String:47 - Operation:Create New Item;Item Info:[9996543213210,1];State:Success
+@2017-10-10 18:50:01 INFO  String:50 - Operation:Create New Item;Item Info:[9886543213210,N/A];State:Fail;Reason:No such ISBN existed.
+@2017-10-10 18:50:01 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:50:01 INFO  String:49 - Operation:Create New User;User Info:[newguy@carleton.ca,newpass];State:Success
+@2017-10-10 18:50:01 INFO  String:52 - Operation:Create New User;User Info:[newguy@carleton.ca,newpasstwo];State:Fail;Reason:The User already existed.
+@2017-10-10 18:50:01 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:50:01 INFO  String:44 - Operation:Create New Title;Title Info:[9777743213210,DelItem Vol.1];State:Success
+@2017-10-10 18:50:01 INFO  String:47 - Operation:Create New Item;Item Info:[9777743213210,1];State:Success
+@2017-10-10 18:50:01 INFO  String:85 - Operation:Delete Item;Item Info:[9777743213210,N/A];State:Success
+@2017-10-10 18:50:01 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,5];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 18:50:01 INFO  String:88 - Operation:Delete Item;Item Info:[9441442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 18:50:01 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:50:01 INFO  String:49 - Operation:Create New User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:50:01 INFO  String:93 - Operation:Delete User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:50:01 INFO  String:99 - Operation:Delete User;User Info:[Michelle@carleton.ca,Michelle];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:50:01 INFO  String:96 - Operation:Delete User;User Info:[Kevin@carleton.ca,Kevin];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:50:01 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:50:01 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781317594277,1,2017-10-10 06:50:01];State:Success
+@2017-10-10 18:50:01 INFO  String:104 - Operation:Renew Item;Loan Info:[5,9781317594277,1,2017-10-10 06:50:01];State:Success
+@2017-10-10 18:50:01 INFO  String:107 - Operation:Renew Item;Loan Info:[5,9781317594277,1,2017-10-10 06:50:01];State:Fail;Reason:Renewed Item More Than Once for the Same Loan.
+@2017-10-10 18:50:01 INFO  String:111 - Operation:Renew Item;Loan Info:[5,9781611687910,1,2017-10-10 06:50:01];State:Fail;Reason:The loan does not exist.
+@2017-10-10 18:50:01 INFO  String:119 - Operation:Renew Item;Loan Info:[0,9781442668584,1,2017-10-10 06:50:01];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:50:01 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:50:01 INFO  String:44 - Operation:Create New Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:50:01 INFO  String:88 - Operation:Delete Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:50:01 INFO  String:95 - Operation:Delete Title;ISBN Info:[9876543210000];State:Fail;Reason:The Title Does Not Exist.
+@2017-10-10 18:50:01 INFO  String:91 - Operation:Delete Title;ISBN Info:[9441442668584];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:50:01 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:50:01 INFO  String:44 - Operation:Create New Title;Title Info:[9876543213210,New Test Book];State:Success
+@2017-10-10 18:50:01 INFO  String:47 - Operation:Create New Title;Title Info:[9876543213210,New Test Book Vol.2];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 18:50:01 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:50:01 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781236565459,1,2017-10-10 06:50:01];State:Success
+@2017-10-10 18:50:01 INFO  String:72 - Operation:Borrow Item;Loan Info:[5,9441442668584,1,2017-10-10 06:50:01];State:Fail;Reason:The Item is Not Available.
+@2017-10-10 18:50:01 INFO  String:68 - Operation:Borrow Item;Loan Info:[0,9781442616899,1,2017-10-10 06:50:01];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:59:51 INFO  String:29 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2017-10-10 18:59:51 INFO  String:49 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Success
+@2017-10-10 18:59:51 INFO  String:33 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2017-10-10 06:59:51,0], [2,9441442668584,1,2017-10-10 06:59:51,0]]
+@2017-10-10 18:59:51 INFO  String:26 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context], [9781236565459,My First Book], [9441442668584,My First Loan]]
+@2017-10-10 18:59:51 INFO  String:26 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1], [4,9781317594277,1], [5,9781236565459,1], [6,9441442668584,1]]
+@2017-10-10 18:59:51 INFO  String:105 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2017-10-10 18:59:51 INFO  String:157 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [4,5]]
+@2017-10-10 18:59:51 INFO  String:115 - Operation:Apply OutStanding Fee;Fee Info:[2,0];State:Success
+@2017-10-10 18:59:51 INFO  String:157 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [4,5], [2,0]]
+@2017-10-10 18:59:51 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781317594277,1,2017-10-10 06:59:51];State:Success
+@2017-10-10 18:59:51 INFO  String:142 - Operation:Return Item;Loan Info:[5,9781317594277,1,2017-10-10 06:59:51];State:Success
+@2017-10-10 18:59:51 INFO  String:149 - Operation:Return Item;Loan Info:[5,9781317594277,1,2017-10-10 06:59:51];State:Fail;Reason:The Loan Does Not Exist.
+@2017-10-10 18:59:51 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:59:51 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:59:51 INFO  String:44 - Operation:Create New Title;Title Info:[9996543213210,ItemBook Vol.1];State:Success
+@2017-10-10 18:59:51 INFO  String:47 - Operation:Create New Item;Item Info:[9996543213210,1];State:Success
+@2017-10-10 18:59:51 INFO  String:50 - Operation:Create New Item;Item Info:[9886543213210,N/A];State:Fail;Reason:No such ISBN existed.
+@2017-10-10 18:59:51 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:59:51 INFO  String:49 - Operation:Create New User;User Info:[newguy@carleton.ca,newpass];State:Success
+@2017-10-10 18:59:51 INFO  String:52 - Operation:Create New User;User Info:[newguy@carleton.ca,newpasstwo];State:Fail;Reason:The User already existed.
+@2017-10-10 18:59:51 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:59:51 INFO  String:44 - Operation:Create New Title;Title Info:[9777743213210,DelItem Vol.1];State:Success
+@2017-10-10 18:59:51 INFO  String:47 - Operation:Create New Item;Item Info:[9777743213210,1];State:Success
+@2017-10-10 18:59:51 INFO  String:85 - Operation:Delete Item;Item Info:[9777743213210,N/A];State:Success
+@2017-10-10 18:59:51 INFO  String:92 - Operation:Delete Item;Item Info:[9777743213210,5];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 18:59:51 INFO  String:88 - Operation:Delete Item;Item Info:[9441442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 18:59:51 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:59:51 INFO  String:49 - Operation:Create New User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:59:51 INFO  String:93 - Operation:Delete User;User Info:[tbdelete@carleton.ca,password];State:Success
+@2017-10-10 18:59:51 INFO  String:99 - Operation:Delete User;User Info:[Michelle@carleton.ca,Michelle];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:59:51 INFO  String:96 - Operation:Delete User;User Info:[Kevin@carleton.ca,Kevin];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:59:51 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:59:51 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781317594277,1,2017-10-10 06:59:51];State:Success
+@2017-10-10 18:59:51 INFO  String:104 - Operation:Renew Item;Loan Info:[5,9781317594277,1,2017-10-10 06:59:51];State:Success
+@2017-10-10 18:59:51 INFO  String:107 - Operation:Renew Item;Loan Info:[5,9781317594277,1,2017-10-10 06:59:51];State:Fail;Reason:Renewed Item More Than Once for the Same Loan.
+@2017-10-10 18:59:51 INFO  String:111 - Operation:Renew Item;Loan Info:[5,9781611687910,1,2017-10-10 06:59:51];State:Fail;Reason:The loan does not exist.
+@2017-10-10 18:59:51 INFO  String:119 - Operation:Renew Item;Loan Info:[0,9781442668584,1,2017-10-10 06:59:51];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 18:59:51 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:59:51 INFO  String:44 - Operation:Create New Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:59:51 INFO  String:88 - Operation:Delete Title;Title Info:[9776543213210,DelTitle Vol.1];State:Success
+@2017-10-10 18:59:51 INFO  String:95 - Operation:Delete Title;ISBN Info:[9876543210000];State:Fail;Reason:The Title Does Not Exist.
+@2017-10-10 18:59:51 INFO  String:91 - Operation:Delete Title;ISBN Info:[9441442668584];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 18:59:51 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:59:51 INFO  String:145 - Operation:Pay Fine;Fee Info:[4,0];State:Success
+@2017-10-10 18:59:51 INFO  String:140 - Operation:Pay Fine;Fee Info:[0,0];State:Fail;Reason:Borrowing Items Exist.
+@2017-10-10 18:59:51 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:59:51 INFO  String:44 - Operation:Create New Title;Title Info:[9876543213210,New Test Book];State:Success
+@2017-10-10 18:59:51 INFO  String:47 - Operation:Create New Title;Title Info:[9876543213210,New Test Book Vol.2];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 18:59:51 INFO  String:52 - Operation:Create New User;User Info:[testuser@carleton.ca,password];State:Fail;Reason:The User already existed.
+@2017-10-10 18:59:51 INFO  String:62 - Operation:Borrow Item;Loan Info:[5,9781236565459,1,2017-10-10 06:59:51];State:Success
+@2017-10-10 18:59:51 INFO  String:72 - Operation:Borrow Item;Loan Info:[5,9441442668584,1,2017-10-10 06:59:51];State:Fail;Reason:The Item is Not Available.
+@2017-10-10 18:59:51 INFO  String:68 - Operation:Borrow Item;Loan Info:[0,9781442616899,1,2017-10-10 06:59:51];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 19:00:46 INFO  String:26 - Operation:Initialize ItemTable;ItemTable: [[0,9781442668584,1], [1,9781442616899,1], [2,9781442667181,1], [3,9781611687910,1], [4,9781317594277,1], [5,9781236565459,1], [6,9441442668584,1]]
+@2017-10-10 19:00:46 INFO  String:33 - Operation:Initialize LoanTable;LoanTable: [[0,9781442668584,1,2017-10-10 07:00:46,0], [2,9441442668584,1,2017-10-10 07:00:46,0]]
+@2017-10-10 19:00:46 INFO  String:85 - Operation:Delete Item;Item Info:[9781611687910,N/A];State:Success
+@2017-10-10 19:00:46 INFO  String:88 - Operation:Delete Item;Item Info:[9781442668584,1];State:Fail;Reason:The item is currently on loan.
+@2017-10-10 19:00:46 INFO  String:92 - Operation:Delete Item;Item Info:[9781442616899,3];State:Fail;Reason:The Item Does Not Exist.
+@2017-10-10 19:00:46 INFO  String:29 - Operation:Initialize UserTable;UserTable: [[0,Zhibo@carleton.ca,Zhibo], [1,Yu@carleton.ca,Yu], [2,Michelle@carleton.ca,Michelle], [3,Kevin@carleton.ca,Kevin], [4,Sun@carleton.ca,Sun]]
+@2017-10-10 19:00:46 INFO  String:26 - Operation:Initialize TitleTable;TitleTable: [[9781442668584,By the grace of God], [9781442616899,Dante's lyric poetry], [9781442667181,Courtesy lost], [9781611687910,Writing for justice], [9781317594277,The act in context], [9781236565459,My First Book], [9441442668584,My First Loan]]
+@2017-10-10 19:00:46 INFO  String:105 - Operation:Apply OutStanding Fee;Fee Info:[0,0];State:Success
+@2017-10-10 19:00:46 INFO  String:157 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [4,5]]
+@2017-10-10 19:00:46 INFO  String:115 - Operation:Apply OutStanding Fee;Fee Info:[2,0];State:Success
+@2017-10-10 19:00:46 INFO  String:157 - Operation:Initialize FeeTable;FeeTable: [[0,5], [3,5], [4,5], [2,0]]
+@2017-10-10 19:00:46 INFO  String:62 - Operation:Borrow Item;Loan Info:[2,9781236565459,1,2017-10-10 07:00:46];State:Success
+@2017-10-10 19:00:46 INFO  String:142 - Operation:Return Item;Loan Info:[2,9781236565459,1,2017-10-10 07:00:46];State:Success
+@2017-10-10 19:00:46 INFO  String:149 - Operation:Return Item;Loan Info:[2,9781442667181,1,2017-10-10 07:00:46];State:Fail;Reason:The Loan Does Not Exist.
+@2017-10-10 19:00:46 INFO  String:62 - Operation:Borrow Item;Loan Info:[2,9781317594277,1,2017-10-10 07:00:46];State:Success
+@2017-10-10 19:00:46 INFO  String:55 - Operation:Borrow Item;Loan Info:[2,9781317594277,3,2017-10-10 07:00:46];State:Fail;Reason:Invalid Copynumber.
+@2017-10-10 19:00:46 INFO  String:52 - Operation:Borrow Item;Loan Info:[2,9781317594000,1,2017-10-10 07:00:46];State:Fail;Reason:Invalid ISBN.
+@2017-10-10 19:00:46 INFO  String:72 - Operation:Borrow Item;Loan Info:[2,9781317594277,1,2017-10-10 07:00:46];State:Fail;Reason:The Item is Not Available.
+@2017-10-10 19:00:46 INFO  String:68 - Operation:Borrow Item;Loan Info:[0,9781442667181,1,2017-10-10 07:00:46];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 19:00:46 INFO  String:104 - Operation:Renew Item;Loan Info:[2,9781317594277,1,2017-10-10 07:00:46];State:Success
+@2017-10-10 19:00:46 INFO  String:107 - Operation:Renew Item;Loan Info:[2,9781317594277,1,2017-10-10 07:00:46];State:Fail;Reason:Renewed Item More Than Once for the Same Loan.
+@2017-10-10 19:00:46 INFO  String:119 - Operation:Renew Item;Loan Info:[0,9781442667181,1,2017-10-10 07:00:46];State:Fail;Reason:Outstanding Fee Exists.
+@2017-10-10 19:00:46 INFO  String:111 - Operation:Renew Item;Loan Info:[2,9781442667181,1,2017-10-10 07:00:46];State:Fail;Reason:The loan does not exist.
+@2017-10-10 19:00:46 INFO  String:49 - Operation:Create New User;User Info:[eric@carleton.ca,hello];State:Success
+@2017-10-10 19:00:46 INFO  String:52 - Operation:Create New User;User Info:[Zhibo@carleton.ca,Zhibo];State:Fail;Reason:The User already existed.
+@2017-10-10 19:00:46 INFO  String:44 - Operation:Create New Title;Title Info:[9999999999999,Test Book Vol.1];State:Success
+@2017-10-10 19:00:46 INFO  String:47 - Operation:Create New Title;Title Info:[9781442616899,Dante's lyric poetry];State:Fail;Reason:The ISBN already existed.
+@2017-10-10 19:00:46 INFO  String:145 - Operation:Pay Fine;Fee Info:[3,0];State:Success
+@2017-10-10 19:00:46 INFO  String:140 - Operation:Pay Fine;Fee Info:[0,0];State:Fail;Reason:Borrowing Items Exist.
+@2017-10-10 19:00:46 INFO  String:93 - Operation:Delete User;User Info:[Yu@carleton.ca,Yu];State:Success
+@2017-10-10 19:00:46 INFO  String:82 - Operation:Delete User;User Info:[N/A,N/A];State:Fail;Reason:The User Does Not Exist.
+@2017-10-10 19:00:46 INFO  String:47 - Operation:Create New Item;Item Info:[9781442668584,2];State:Success
+@2017-10-10 19:00:46 INFO  String:50 - Operation:Create New Item;Item Info:[1112223334444,N/A];State:Fail;Reason:No such ISBN existed.
+@2017-10-10 19:00:46 INFO  String:60 - Operation:Delete Item Due to Title Deletion;ISBN Info:[9781442616899];State:Success
+@2017-10-10 19:00:46 INFO  String:88 - Operation:Delete Title;Title Info:[9781442616899,Dante's lyric poetry];State:Success
+@2017-10-10 19:00:46 INFO  String:91 - Operation:Delete Title;ISBN Info:[9781442668584];State:Fail;Reason:Active Loan Exists.
+@2017-10-10 19:00:46 INFO  String:95 - Operation:Delete Title;ISBN Info:[1112223334444];State:Fail;Reason:The Title Does Not Exist.
 @

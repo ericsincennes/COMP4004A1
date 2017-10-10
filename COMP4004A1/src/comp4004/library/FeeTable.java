@@ -26,6 +26,8 @@ public class FeeTable {
     	feeList.add(fee);
     	fee=new Fee(3,5);
     	feeList.add(fee);
+    	fee=new Fee(4,5);
+    	feeList.add(fee);
     	Initialization();
     };
     public static final FeeTable getInstance() {
